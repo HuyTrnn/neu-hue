@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
 import pho from "../assets/images/pho.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import {
   useScroll,
@@ -13,6 +13,7 @@ export default function Header() {
   const [scroll, setScroll] = useState();
   const y = useAnimatedValue(0, { immediate: true });
   const height = useAnimatedValue(120);
+  const navigate = useNavigate()
   useScroll(({ scrollY }) => {
     y.value = scrollY;
   });
@@ -29,7 +30,7 @@ export default function Header() {
   return (
     <AnimatedBlock
       style={{ height: heightHeader }}
-      className={`fixed top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 `}
+      className={`fixed top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 z-50`}
     >
       <div className="py-[22px]">
         <img src={logo} alt="logo" />
@@ -49,7 +50,7 @@ export default function Header() {
             Neu Hue
           </AnimatedBlock>
         </NavLink>
-        <NavLink
+        <Link
           to="/speisen"
           className="uppercase cursor-pointer hover:opacity-70 transition duration-150 ease-out font-bold text-lg"
         >
@@ -60,7 +61,7 @@ export default function Header() {
           >
             Speisen
           </AnimatedBlock>
-        </NavLink>
+        </Link>
         <NavLink
           to="/Kontakt"
           className="uppercase cursor-pointer hover:opacity-70 transition duration-150 ease-out font-bold text-lg "

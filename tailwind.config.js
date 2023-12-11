@@ -4,11 +4,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      color : {
+      colors : {
         primary: {
-          "1" : "#FF8D00",
-          "2" : "#ce2329",
-          "text" : "#D7D7D7"
+          100 : '#FF8D00',
+          200 : '#ce2329',
+          'text' : '#D7D7D7'
         }
 
       }
@@ -16,3 +16,4 @@ module.exports = {
   },
   plugins: [],
 }
+

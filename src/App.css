@@ -29,9 +29,16 @@
 }
 
 .background {
+  background-image: url('/src/assets/images/background-home.jpg');
+  background-repeat: repeat-y;
+  background-size: 100% 92%;
+  background-attachment: fixed;
+}
+
+.background-speisen {
   background-image: url('/src/assets/images/background.jpg');
-  background-repeat: repeat;
-  background-size: contain;
+  background-repeat: repeat-y;
+  background-size: 100% 92%;
   background-attachment: fixed;
 }
 

@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import Speisen from './pages/Speisen';
-import Homepage from './pages/Homepage';
+import logo from "./logo.svg";
+import "./App.css";
+import Speisen from "./pages/Speisen";
+import Homepage from "./pages/Homepage";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,12 +10,13 @@ import {
 } from "react-router-dom";
 
 function App() {
-
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Homepage />}>
-        <Route path="speisen" element={<Speisen />} />
+      <Route>
+        <Route path="/" element={<Homepage />} />
         {/* ... etc. */}
+
+        <Route path="speisen" element={<Speisen />} />
       </Route>
     )
   );

@@ -1,5 +1,18 @@
 import React from "react";
+import Carousel from "./Carousel";
+import Introduce from "./Introduce";
+import Recommend from "./Recommend";
+import Gallery from "./Gallery"
 
 export default function Content() {
-  return <div className="background h-[5000px] min-h-screen">content</div>;
+
+  return (
+    <div className="background h-full min-h-screen ">
+      <Carousel />
+      <Introduce/>
+      <Gallery />
+      <Recommend />
+      <Gallery />
+    </div>
+  );
 }

@@ -10,10 +10,13 @@
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-pdf": "^7.5.1",
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",
     "react-ui-animate": "^2.0.0",
     "sort-by": "^1.2.0",
+    "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
