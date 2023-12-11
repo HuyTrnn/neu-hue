@@ -2,9 +2,52 @@ import React from "react";
 import Menu from "./Menu";
 import speisen from "../assets/images/neuhue.png";
 import { FaArrowDown } from "react-icons/fa";
+import SpeisenMenu from "./SpeisenMenu";
 export default function SpeisenContent() {
+  const foodCategory = [
+    {
+      category: "DAC BIET",
+      items: [
+        {
+          name: "Dac Biet",
+        },
+        {
+          name: "Reisgerichte Curry",
+        },
+        {
+          name: "Chua Ngot / SuBsauer SoBe",
+        },
+        {
+          name: "Reisgerichte Mango mit Gemuse-Sauce",
+        },
+        {
+          name: "Reis Gerichte Penuts",
+        },
+      ],
+    },
+    {
+      category: "GERICHTE",
+      items: [
+        {
+          name: "Gegrilltes Fleites",
+        },
+        {
+          name: "Gegrilltes Fleisch",
+        },
+        {
+          name: "Gegrilltes Fleisch mit Gemuse in housgemachter in Mango-Sauce",
+        },
+        {
+          name: "Gegrilltes Fleisch mit Ananas und Wok-Gemuse in suBsaurer SoBe",
+        },
+        {
+          name: "Gegrilltes Fleisch mit Gemuse in housgemachter Erdnusssauce",
+        },
+      ],
+    },
+  ];
   return (
-    <div>
+    <div className="px-[120px] mb-12">
       <div className="w-full flex justify-center items-center py-10 px-[120px] min-h-[654px]">
         <div className="w-full flex flex-col gap-20">
           <div className="flex flex-col gap-4 justify-center items-center">
@@ -20,6 +63,9 @@ export default function SpeisenContent() {
         </div>
       </div>
       <Menu />
+      {foodCategory.map(category => (
+        <SpeisenMenu title={category.category} data={category.items}/>
+      ))}
     </div>
   );
 }

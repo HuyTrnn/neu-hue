@@ -7,75 +7,40 @@ import img3 from "../assets/images/slider2.jpg";
 // import swiper style
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/autoplay";
 // import require module
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 export default function ProductsCarousel() {
+  const newArray = Array.from({ length: 10 }, (_, index) => index + 1);
   return (
     <Swiper
       slidesPerView={4}
-      spaceBetween={30}
+      spaceBetween={20}
       pagination={{
         clickable: true,
       }}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
+      speed={1200}
       loop={true}
-      modules={[Pagination]}
-      className="mySwiper text-white cursor-pointer max-w-screen"
+      modules={[Autoplay, Navigation]}
+      className="mySwiper swiper-slide text-white cursor-pointer max-w-screen"
     >
-      <SwiperSlide className="flex flex-col space-y-5">
-        <img className="h-[100px] w-[100px]" src={img}></img>
-        <div className="flex justify-between">
-          <span>Planet 1</span>
-          <span>7.000.000</span>
-        </div>
-        
-        <div>
-          <span className="text-slate-400">buy planet</span>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="flex flex-col space-y-5">
-        <img className="h-[100px] w-[100px]" src={img}></img>
-        <div className="flex justify-between">
-          <span>Planet 1</span>
-          <span>7.000.000</span>
-        </div>
-        
-        <div>
-          <span className="text-slate-400">buy planet</span>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="flex flex-col space-y-5">
-        <img className="h-[100px] w-[100px]" src={img2}></img>
-        <div className="flex justify-between">
-          <span>Planet 1</span>
-          <span>7.000.000</span>
-        </div>
-        
-        <div>
-          <span className="text-slate-400">buy planet</span>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="flex flex-col space-y-5">
-        <img className="h-[100px] w-[100px]" src={img3}></img>
-        <div className="flex justify-between">
-          <span>Planet 1</span>
-          <span>7.000.000</span>
-        </div>
-        <div>
-          <span className="text-slate-400">buy planet</span>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="flex flex-col space-y-5">
-        <img className="h-[100px] w-[100px]" src={img}></img>
-        <div className="flex justify-between">
-          <span>Planet 1</span>
-          <span>7.000.000</span>
-        </div>
-        
-        <div>
-          <span className="text-slate-400">buy planet</span>
-        </div>
-      </SwiperSlide>
+      {newArray.map(() => (
+        <SwiperSlide className="flex flex-col space-y-5">
+          <div className="flex justify-between relative h-full w-full rounded-lg">
+            <img className="h-full w-full rounded-lg" src={img}></img>
+          </div>
+
+          <div className="flex justify-between text-primary-100">
+            <span className="z-50 font-bold"> 3a Gyoza Veggie</span>
+            <span className="z-50 font-bold">4,00 €</span>
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

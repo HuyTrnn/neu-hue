@@ -8,6 +8,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Contact from "./pages/Contact";
 
 function App() {
   const router = createBrowserRouter(
@@ -17,6 +18,8 @@ function App() {
         {/* ... etc. */}
 
         <Route path="speisen" element={<Speisen />} />
+        <Route path="Kontakt" element={<Contact />} />
+
       </Route>
     )
   );

@@ -3,6 +3,7 @@ import Carousel from "./Carousel";
 import Introduce from "./Introduce";
 import Recommend from "./Recommend";
 import Gallery from "./Gallery"
+import BookingTable from "./BookingTable";
 
 export default function Content() {
 
@@ -12,7 +13,7 @@ export default function Content() {
       <Introduce/>
       <Gallery />
       <Recommend />
-      <Gallery />
+      <BookingTable />
     </div>
   );
 }

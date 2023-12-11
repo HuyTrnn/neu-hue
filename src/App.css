@@ -42,6 +42,23 @@
   background-attachment: fixed;
 }
 
+.background-contact {
+  background-image: url('/src/assets/images/background.jpg');
+  background-repeat: repeat-y;
+  background-size: 100% 92%;
+}
+
+.speisen:hover ul {
+  display: block;
+  opacity: 1;
+}
+
+.list-speisen {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .active div {
   color: #FF8D00 !important;
 }
