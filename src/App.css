@@ -63,6 +63,19 @@
   color: #FF8D00 !important;
 }
 
+@media (min-width: 768px) {
+  .mySwiper {
+    space-between: 20px;
+  }
+}
+
+/* Smaller screens (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .mySwiper {
+    space-between: 8px;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

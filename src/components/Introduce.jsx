@@ -3,7 +3,7 @@ import Tag from "./Tag";
 
 export default function Introduce() {
   return (
-    <div className="w-full flex justify-center items-center py-10 px-[120px] min-h-[700px]">
+    <div className="w-full flex justify-center items-center py-10 px-[40px] md:px-[80px] lg:px-[120px] min-h-[700px]">
         <div className="w-full flex flex-col gap-20">
           <div className="flex flex-col gap-4 justify-center items-center">
             <h2 className="text-4xl text-primary-100 font-semibold">
@@ -17,7 +17,7 @@ export default function Introduce() {
               nach Hause!
             </span>
           </div>
-          <div className="flex gap-8 justify-between mt-5">
+          <div className="flex lg:flex-row flex-col gap-8 justify-between mt-5">
           <Tag/>
           <Tag/>
           <Tag/>

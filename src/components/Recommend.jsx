@@ -10,7 +10,7 @@ export default function Recommend() {
         backgroundImage: `url(${bg_into})`,
         backgroundSize: "cover",
       }}
-      className="w-full min-h-[700px] relative"
+      className="w-full md:min-h-[700px] relative md:px-0 px-4 min-h-[520px] "
     >
       <div
         style={{
@@ -18,32 +18,49 @@ export default function Recommend() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "28%",
-          backgroundPositionY: "170px",
+          backgroundPositionY: "50%",
+          backgroundPositionX: "50%",
         }}
-        className="absolute top-0 bottom-0 right-0 left-0 bg-[#ff8d0045] flex items-center justify-around"
+        className="absolute top-0 bottom-0 right-0 left-0 bg-[#ff8d0045] flex flex-col md:flex-row items-center justify-around md:px-0 px-10"
       >
-        <div className="text-right relative right-[-14%] h-[300px] flex flex-col justify-between">
-          <h2 className="text-4xl text-primary-200 font-semibold min-h-[80px]">Starters</h2>
-          <span className="text-black/80 text-right  text-lg line-clamp-6 text-[#4f4c4c]">
-            Unsere asiatische Küche ist bunt und vielfältig! Ob als Mittagstisch
-            oder komplettes Abendmenue: Wir haben die besten Gerichte von
-            Vietnamesisch bis Sushi für Dich zusammengestellt. Wir liefern Ihnen
-            Ihre fernöstlichen Köstlichkeiten auch direkt nach Hause!
-          </span>
-          <button className=" group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded hover:w-fit w-[190px] transition hover:bg-primary-200 hover:text-primary-100 self-end ">Online bestellen <IoIosArrowDropright className="hidden group-hover:block ml-3"/></button>
+        <div className=" md:w-[33.33333%] text-center md:text-right relative md:right-[-14%] md:h-[300px] flex flex-col justify-between">
+          <h2 className="text-2xl md:text-4xl text-primary-200 font-semibold lg:min-h-[80px]">
+            Starters
+          </h2>
+          <div className="flex items-center flex-col md:block">
+            <span className="text-black/80 text-center md:text-right  text-base md:text-lg line-clamp-6 text-[#4f4c4c] mb-5">
+              Unsere asiatische Küche ist bunt und vielfältig! Ob als
+              Mittagstisch oder komplettes Abendmenue: Wir haben die besten
+              Gerichte von Vietnamesisch bis Sushi für Dich zusammengestellt.
+              Wir liefern Ihnen Ihre fernöstlichen Köstlichkeiten auch direkt
+              nach Hause!
+            </span>
+            <button className=" group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded hover:w-fit w-[190px] transition hover:bg-primary-200 hover:text-primary-100 float-right">
+              Online bestellen{" "}
+              <IoIosArrowDropright className="hidden group-hover:block ml-3" />
+            </button>
+          </div>
         </div>
-        <img src={fork} />
-        <div className="text-left relative right-[14%] h-[300px] flex flex-col justify-between">
-          <h2 className="text-4xl text-primary-200 font-semibold min-h-[80px]">
+        <div className="md:w-[33.33333%] hidden md:block md:w-[55%] flex justify-center">
+          <img src={fork} className="" />
+        </div>
+        <div className=" md:w-[33.33333%] text-center md:text-left relative md:right-[14%] md:h-[300px] flex flex-col justify-between">
+          <h2 className="text-2xl md:text-4xl text-primary-200 font-semibold lg:min-h-[80px]">
             Spezialitäten aus Vietnam
           </h2>
-          <span className="text-black/80 text-left  text-lg line-clamp-6 text-[#4f4c4c]">
-            Unsere asiatische Küche ist bunt und vielfältig! Ob als Mittagstisch
-            oder komplettes Abendmenue: Wir haben die besten Gerichte von
-            Vietnamesisch bis Sushi für Dich zusammengestellt. Wir liefern Ihnen
-            Ihre fernöstlichen Köstlichkeiten auch direkt nach Hause!
-          </span>
-          <button className="group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded hover:w-fit w-[190px] transition hover:bg-primary-200 hover:text-primary-100 self-start ">Online bestellen <IoIosArrowDropright className="hidden group-hover:block ml-3"/></button>
+          <div className="flex items-center flex-col md:block">
+            <span className="text-black/80 text-center md:text-left text-base md:text-lg line-clamp-6 text-[#4f4c4c] mb-5">
+              Unsere asiatische Küche ist bunt und vielfältig! Ob als
+              Mittagstisch oder komplettes Abendmenue: Wir haben die besten
+              Gerichte von Vietnamesisch bis Sushi für Dich zusammengestellt.
+              Wir liefern Ihnen Ihre fernöstlichen Köstlichkeiten auch direkt
+              nach Hause!
+            </span>
+            <button className="group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded hover:w-fit w-[190px] transition hover:bg-primary-200 hover:text-primary-100 md:self-start ">
+              Online bestellen{" "}
+              <IoIosArrowDropright className="hidden group-hover:block ml-3" />
+            </button>
+          </div>
         </div>
       </div>
       <div></div>

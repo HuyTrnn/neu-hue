@@ -46,9 +46,17 @@ export default function SpeisenContent() {
       ],
     },
   ];
+
+  const scrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <div className="px-[120px] mb-12">
-      <div className="w-full flex justify-center items-center py-10 px-[120px] min-h-[654px]">
+    <div className="px-[40px] md:px-[80px] lg:px-[120px] mb-12">
+      <div className="w-full flex justify-center items-center py-10 min-h-screen">
         <div className="w-full flex flex-col gap-20">
           <div className="flex flex-col gap-4 justify-center items-center">
             <img src={speisen} className="h-[300px]" alt="intro" />
@@ -56,15 +64,15 @@ export default function SpeisenContent() {
               Vietnamesisches Restaurant mit mehr als 200 attraktiven Gerichten,
               die darauf warten, von Ihnen entdeckt zu werden!
             </span>
-            <button className="bg-white text-primary-200 rounded-full animate-bounce p-3 mt-[64px] hover:opacity-80">
-              <FaArrowDown className="" />
+            <button onClick={() => scrollDown()} className="bg-white text-primary-200 rounded-full animate-bounce p-3 mt-[64px] hover:opacity-80">
+              <FaArrowDown  className="" />
             </button>
           </div>
         </div>
       </div>
       <Menu />
       {foodCategory.map(category => (
-        <SpeisenMenu title={category.category} data={category.items}/>
+        <SpeisenMenu key={category.category} title={category.category} data={category.items}/>
       ))}
     </div>
   );

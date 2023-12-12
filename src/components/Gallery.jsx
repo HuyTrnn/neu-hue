@@ -3,8 +3,8 @@ import test from "../assets/images/slider3.jpg";
 import ProductsCarousel from "./ProductsCarousel";
 export default function Gallery() {
   return (
-    <div className="w-full flex justify-center items-center py-10 px-[120px] ">
-      <div className="w-full flex flex-col gap-20">
+    <div className="w-full flex justify-center items-center py-10 px-[40px] md:px-[80px] lg:px-[120px] ">
+      <div className="w-full flex flex-col gap-8 sm:gap-20">
         <div className="flex flex-col gap-4 justify-center items-center">
           <h2 className="text-4xl text-primary-100 font-semibold">
             Müssen versuchen
@@ -16,7 +16,7 @@ export default function Gallery() {
             20095, 20099 und der Mindestbestellwert beträgt 15,00 Euro.
           </span>
         </div>
-        <div className="max-w-screen">
+        <div className="max-w-screen space-x-2 sm:space-x-5">
           <ProductsCarousel />
         </div>
       </div>

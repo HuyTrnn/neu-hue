@@ -5,8 +5,8 @@ export default function FoodCard() {
 
   return (
     <div className="grid grid-cols-3 place-items-center gap-y-6">
-      {newArray.map(() => (
-        <div className="w-[290px] object-contain flex flex-col items-center">
+      {newArray.map((index) => (
+        <div key={index} className="w-[290px] object-contain flex flex-col items-center">
           <span className="text-primary-text font-bold text-xl">01</span>
           <p className="text-primary-100 text-xl font-bold">Mini-Nem</p>
           <div className="h-[220px] w-full rounded-lg bg-center bg-cover bg-[url('https://www.lquan.de/wp-content/uploads/2020/11/starter.jpg')]">

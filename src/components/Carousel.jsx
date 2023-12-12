@@ -39,14 +39,14 @@ export default function Carousel() {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     width: "100%",
-    minHeight: "700px",
+
     maxHeight: "800px",
     transition: "background-image 0.5s ease-in-out",
   };
 
   return (
     <div
-      className="w-full flex flex-col justify-between"
+      className="w-full flex flex-col justify-between lg:min-h-[700px] min-h-[525px]"
       style={backgroundImageStyle}
     >
       <div className="flex-1 flex px-20 items-center justify-between ">
