@@ -4,10 +4,15 @@ import Speisen from "./pages/Speisen";
 import Homepage from "./pages/Homepage";
 import {
   createBrowserRouter,
+  BrowserRouter,
   createRoutesFromElements,
   Route,
-  RouterProvider,
+
+  Routes,
+
 } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import Contact from "./pages/Contact";
 
 function App() {
@@ -18,15 +23,25 @@ function App() {
         {/* ... etc. */}
 
         <Route path="speisen" element={<Speisen />} />
-        <Route path="Kontakt" element={<Contact />} />
-
+        <Route path="kontakt" element={<Contact />} />
       </Route>
     )
   );
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <TransitionGroup>
+          <CSSTransition className="slide" timeout={3000}>
+            {/* <RouterProvider router={router} /> */}
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="speisen" element={<Speisen />} />
+              <Route path="kontakt" element={<Contact />} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </BrowserRouter>
     </div>
   );
 }

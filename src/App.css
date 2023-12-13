@@ -59,9 +59,13 @@
   transition: opacity 0.2s ease-in-out;
 }
 
+.swiper-slide {
+  z-index: 2;
+}
 .active div {
   color: #FF8D00 !important;
 }
+
 
 @media (min-width: 768px) {
   .mySwiper {

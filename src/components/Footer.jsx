@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
-            <div>
+            <div className="flex flex-col items-center ">
               <p className="font-medium text-gray-400">Zweig</p>
 
               <ul className="mt-6 space-y-4 text-sm">
@@ -131,42 +131,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-100 pt-12 dark:border-gray-800">
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <ul className="flex flex-wrap gap-4 text-xs">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-                >
-                  Cookies
-                </a>
-              </li>
-            </ul>
-
-            <p className="mt-8 text-xs text-gray-500 dark:text-gray-400 sm:mt-0">
-              &copy; 2022. Company Name. All rights reserved.
-            </p>
-          </div>
-        </div>
+        
       </div>
     </footer>
   );

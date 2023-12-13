@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import img1 from '../assets/images/slider1.jpg'
 import img2 from '../assets/images/slider2.jpg'
 import img3 from '../assets/images/slider3.jpg'
+import img4 from '../assets/images/slider4.jpg'
 
 export default function Carousel() {
   const slider = [
-    img1, img2, img3
+    img1, img2, img3, img4
   ];
   const [currentImage, setCurrentImage] = useState(0);
   const [image, setImage] = useState(slider);

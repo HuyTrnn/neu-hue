@@ -1,7 +1,7 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-export default function SpeisenToggle() {
+export default function SpeisenToggle({isNav}) {
     const foodCategory = [
         {
           category: "DAC BIET",
@@ -53,7 +53,7 @@ export default function SpeisenToggle() {
       };
   return (
     <div>
-      <ul className="list-speisen absolute min-w-[200px] top-[46px] w-fit h-fit text-white bg-black/70 text-left px-3 py-2 transition duration-150 ease-out">
+      <ul className={`${isNav ? "" : 'list-speisen absolute bg-black/70'}  min-w-[200px] top-[46px] w-fit h-fit text-white  text-left px-3 py-2 transition duration-150 ease-out`}>
         <div className="border-2 border-primary-100 top-[-22px] left-0 absolute border-l-transparent border-b-black/70 border-b-[20px] border-r-[20px] border-l-[20px] border-r-transparent"></div>
         <div className="top-[-22px] left-0 absolute w-[96px] h-6"></div>
         {foodCategory.map((category, index) => (

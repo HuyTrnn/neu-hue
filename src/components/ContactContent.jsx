@@ -12,15 +12,15 @@ export default function ContactContent() {
         <img src={contact2} alt="" className="w-[33.33333%] h-[420px]" />
         <img src={contact3} alt="" className="w-[33.33333%] h-[420px]" />
       </div>
-      <div className="flex justify-center items-center w-screen h-screen ">
-        <div className="container mx-auto my-4 px-4 lg:px-20 flex justify-center items-center flex-1">
-          <div className="w-[50%] p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-15 mr-auto rounded-2xl shadow-2xl">
+      <div className="flex  justify-center items-center w-screen min-h-screen ">
+        <div className="container mx-auto my-4 px-4 lg:px-20 flex  flex-col md:flex-row justify-center items-center flex-1">
+          <div className="w-full md:w-[50%] p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-15 mr-auto rounded-2xl shadow-2xl">
             <div className="flex">
               <h1 className="font-bold uppercase text-5xl text-primary-100">
                 SENDEN SIE UNS A <br /> NACHRICHT
               </h1>
             </div>
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 mt-5">
               <input
                 className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text"
@@ -66,11 +66,13 @@ export default function ContactContent() {
                 wundervolle Zeit mit Ihrer Familie und Ihren Liebsten zu
                 verbringen
               </p>
-              <p className="text-gray-400 text-left">Montag bis Samstag: 10:00 – 20.00 Uhr</p>
+              <p className="text-gray-400 text-left">
+                Montag bis Samstag: 10:00 – 20.00 Uhr
+              </p>
               <p className="text-gray-400 text-left">
                 Liefergebiete: 20354, 20457, 20459, 20095, 20097, 20099
               </p>
-              
+
               <div className="flex justify-between items-center justify-center">
                 <div className="flex my-4 w-2/3 lg:w-1/2 items-center justify-center">
                   <div className="flex flex-col">
@@ -100,7 +102,7 @@ export default function ContactContent() {
         </div>
       </div>
 
-      <div className="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10 ">
+      {/* <div className="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10 ">
         <div className="animate-wiggle-more animate-thrice animate-duration-1000 animate-delay-[5000ms] animate-ease-in">
           <a
             title="Buy me a pizza"
@@ -114,7 +116,7 @@ export default function ContactContent() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
