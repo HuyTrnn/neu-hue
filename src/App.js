@@ -7,13 +7,12 @@ import {
   BrowserRouter,
   createRoutesFromElements,
   Route,
-
+  RouterProvider,
   Routes,
-
 } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Contact from "./pages/Contact";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   const router = createBrowserRouter(
@@ -30,18 +29,13 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <TransitionGroup>
-          <CSSTransition className="slide" timeout={3000}>
-            {/* <RouterProvider router={router} /> */}
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="speisen" element={<Speisen />} />
-              <Route path="kontakt" element={<Contact />} />
-            </Routes>
-          </CSSTransition>
-        </TransitionGroup>
-      </BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="speisen" element={<Speisen />} />
+        <Route path="kontakt" element={<Contact />} />
+      </Routes>
+    
     </div>
   );
 }

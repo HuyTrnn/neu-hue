@@ -1,7 +1,9 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function SpeisenToggle({isNav}) {
+  const navigate = useNavigate()
     const foodCategory = [
         {
           category: "DAC BIET",
@@ -46,10 +48,9 @@ export default function SpeisenToggle({isNav}) {
       ];
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
-        console.log(section);
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
-        }
+        } 
       };
   return (
     <div>
@@ -59,9 +60,12 @@ export default function SpeisenToggle({isNav}) {
         {foodCategory.map((category, index) => (
           <li
             onClick={() =>
-              scrollToSection(
-                `${category.category.toLowerCase().replace(/\s+/g, "-")}`
-              )
+              {
+                scrollToSection(
+                  `${category.category.toLowerCase().replace(/\s+/g, "-")}`
+                )
+                navigate('/speisen', { state: { key: "value" } })
+              }
             }
             key={index}
             className=""

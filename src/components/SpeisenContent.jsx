@@ -4,6 +4,7 @@ import speisen from "../assets/images/neuhue.png";
 import { FaArrowDown } from "react-icons/fa";
 import SpeisenMenu from "./SpeisenMenu";
 import { CSSTransition } from "react-transition-group";
+import { useLocation } from "react-router-dom";
 export default function SpeisenContent() {
   const [isShow, setShow] = useState(false);
 
@@ -51,6 +52,11 @@ export default function SpeisenContent() {
   ];
 
   useEffect(() => {
+    // const el = document.getElementById(targetId);
+    // console.log(el);
+    // if (el) {
+    //   el.scrollIntoView();
+    // }
     setShow(true);
   }, []);
 
