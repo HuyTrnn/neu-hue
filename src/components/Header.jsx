@@ -9,12 +9,14 @@ import SpeisenToggle from "./SpeisenToggle";
 import { useToggle } from "../context/ToggleContext";
 import { useSpring, animated } from "@react-spring/web";
 import useDetectScroll from '@smakss/react-scroll-direction';
+import ScrollToTopButton from "./ScrollToTop";
 export default function Header() {
   const { state, dispatch } = useToggle();
   const scrollDir = useDetectScroll();
   const slideDown = useSpring({
     transform: scrollDir == "down" ? "translateY(-100%)" : "translateY(0%)",
   });
+  
 
   const handleToggle = () => {
     dispatch({ type: "TOGGLE" });
@@ -22,6 +24,7 @@ export default function Header() {
 
   return (
     <>
+      <ScrollToTopButton />
       <animated.header
         style={{ 
           width: "100%",

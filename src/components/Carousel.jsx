@@ -5,6 +5,8 @@ import img5 from "../assets/images/disk2.jpg";
 import img2 from "../assets/images/slider2.jpg";
 import img3 from "../assets/images/slider3-3.jpg";
 import img4 from "../assets/images/slider4.jpg";
+import bg from '../assets/images/pho-dark.png'
+import neu from '../assets/images/neu.png'
 import Tag from "./Tag";
 
 export default function Carousel() {
@@ -46,16 +48,16 @@ export default function Carousel() {
 
   return (
     <div
-      className="w-full flex flex-col justify-between lg:min-h-[700px] min-h-[525px]"
+      className="w-full flex flex-col justify-between items-center lg:min-h-[700px] min-h-[525px]"
       style={backgroundImageStyle}
     >
-      <div>
-      <Tag />
-      </div>
-      <div className="flex-1 flex px-20 items-center justify-between ">
+      <div className="flex-1 flex px-20 items-center justify-between w-full">
         <button className="arrow-button" onClick={handlePreviousSlider}>
           <FaArrowLeft className="text-4xl opacity-50 " />
         </button>
+        <div className="h-full flex w-full items-center justify-center">
+          <img src={bg} alt="" className="opacity-30 select-none"/>
+        </div>
         <button className="arrow-button" onClick={handleNextSlider}>
           <FaArrowRight className="text-4xl opacity-50" />
         </button>

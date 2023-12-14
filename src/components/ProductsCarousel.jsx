@@ -7,9 +7,10 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 // import require module
 import { Navigation, Autoplay } from "swiper/modules";
+import { foodCategory } from "../constants/Menu";
 
 export default function ProductsCarousel() {
-  const newArray = Array.from({ length: 10 }, (_, index) => index + 1);
+  
   return (
     <Swiper
       slidesPerView={4}
@@ -26,17 +27,19 @@ export default function ProductsCarousel() {
       modules={[Autoplay, Navigation]}
       className="mySwiper swiper-slide text-white cursor-pointer max-w-screen z-50"
     >
-      {newArray.map(() => (
-        <SwiperSlide className="flex flex-col space-y-2 sm:space-y-3">
+      {foodCategory.map((category,index) => (
+        category.items.map((item, index) => (
+          <SwiperSlide key ={index} className="flex flex-col space-y-2 sm:space-y-3">
           <div className="flex justify-between relative h-full w-full rounded-lg">
-            <img className="h-full w-full rounded-lg" src={img} alt='product-img'></img>
+            <img className="h-full w-full rounded-lg md:min-h-[320px] max-h-[320px]" src={item.img} alt='product-img'></img>
           </div>
 
           <div className="flex justify-between text-primary-100">
-            <span className="z-10 font-bold sm:text-base text-xs sm:line-clamp-3 line-clamp-2"> 3a Gyoza Veggie</span>
-            <span className="z-10 font-bold sm:text-base text-xs sm:line-clamp-3 line-clamp-2">4,00 €</span>
+            <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2"> {item.name}</span>
+            <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">4,00 €</span>
           </div>
         </SwiperSlide>
+        ))
       ))}
     </Swiper>
   );

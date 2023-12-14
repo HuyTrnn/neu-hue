@@ -11,7 +11,9 @@ export default function Content() {
 
   return (
     <div className="background h-full min-h-screen ">
+      <div className="max-h-[750px]">
       <Carousel />
+      </div>
       <Introduce/>
       <Gallery />
       <Recommend />

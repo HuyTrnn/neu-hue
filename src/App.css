@@ -29,21 +29,21 @@
 }
 
 .background {
-  background-image: url('../src/assets/images/background-home.jpg');
+  background-image: url('../src/assets/images/background.png');
   background-repeat: repeat-y;
   background-size: 100% 92%;
   background-attachment: fixed;
 }
 
 .background-speisen {
-  background-image: url('../src/assets/images/background.jpg');
+  background-image: url('../src/assets/images/background.png');
   background-repeat: repeat-y;
   background-size: 100% 92%;
   background-attachment: fixed;
 }
 
 .background-contact {
-  background-image: url('../src/assets/images/background.jpg');
+  background-image: url('../src/assets/images/background.png');
   background-repeat: repeat-y;
   background-size: 100% 92%;
 }
