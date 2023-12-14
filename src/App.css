@@ -29,21 +29,14 @@
 }
 
 .background {
-  background-image: url('../src/assets/images/background.png');
-  background-repeat: repeat-y;
-  background-size: 100% 92%;
-  background-attachment: fixed;
-}
-
-.background-speisen {
-  background-image: url('../src/assets/images/background.png');
+  background-image: url("../src/assets/images/background.png");
   background-repeat: repeat-y;
   background-size: 100% 92%;
   background-attachment: fixed;
 }
 
 .background-contact {
-  background-image: url('../src/assets/images/background.png');
+  background-image: url("../src/assets/images/background.png");
   background-repeat: repeat-y;
   background-size: 100% 92%;
 }
@@ -63,13 +56,21 @@
   z-index: 2;
 }
 .active div {
-  color: #FF8D00 !important;
+  color: #ff8d00 !important;
 }
-
 
 @media (min-width: 768px) {
   .mySwiper {
     space-between: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .background {
+    background-image: url("../src/assets/images/background-backup.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-attachment: unset;
   }
 }
 

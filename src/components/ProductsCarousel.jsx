@@ -10,37 +10,100 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { foodCategory } from "../constants/Menu";
 
 export default function ProductsCarousel() {
-  
   return (
-    <Swiper
-      slidesPerView={4}
-      spaceBetween={12}
-      pagination={{
-        clickable: true,
-      }}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      speed={1200}
-      loop={true}
-      modules={[Autoplay, Navigation]}
-      className="mySwiper swiper-slide text-white cursor-pointer max-w-screen z-50"
-    >
-      {foodCategory.map((category,index) => (
-        category.items.map((item, index) => (
-          <SwiperSlide key ={index} className="flex flex-col space-y-2 sm:space-y-3">
-          <div className="flex justify-between relative h-full w-full rounded-lg">
-            <img className="h-full w-full rounded-lg md:min-h-[320px] max-h-[320px]" src={item.img} alt='product-img'></img>
-          </div>
+    <>
+      {" "}
+      <div className="hidden sm:block">
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={12}
+          pagination={{
+            clickable: true,
+          }}
+          // autoplay={{
+          //   delay: 2000,
+          //   disableOnInteraction: false,
+          // }}
+          speed={1200}
+          loop={true}
+          modules={[Autoplay, Navigation]}
+          className="mySwiper swiper-slide text-white cursor-pointer max-w-screen z-50 "
+        >
+          {foodCategory.map((category, index) =>
+            category.items.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className="flex flex-col space-y-2 sm:space-y-3"
+              >
+                <div className="flex justify-between relative h-full w-full rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg max-h-[140px] md:min-h-[260px] h-[140px] md:max-h-[240px] lg:min-h-[320px] lg:max-h-[320px]"
+                    src={item.img}
+                    alt="product-img"
+                  ></img>
+                </div>
 
-          <div className="flex justify-between text-primary-100">
-            <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2"> {item.name}</span>
-            <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">4,00 €</span>
-          </div>
-        </SwiperSlide>
-        ))
-      ))}
-    </Swiper>
+                <div className="flex justify-between text-primary-100">
+                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">
+                    {" "}
+                    {item.name}
+                  </span>
+                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">
+                    4,00 €
+                  </span>
+                </div>
+              </SwiperSlide>
+            ))
+          )}
+        </Swiper>
+      </div>
+
+
+      {/* For Mobile */}
+      <div className="block sm:hidden">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={12}
+          pagination={{
+            clickable: true,
+          }}
+          // autoplay={{
+          //   delay: 2000,
+          //   disableOnInteraction: false,
+          // }}
+          speed={1200}
+          loop={true}
+          modules={[Autoplay, Navigation]}
+          className="mySwiper swiper-slide text-white cursor-pointer max-w-screen z-50 "
+        >
+          {foodCategory.map((category, index) =>
+            category.items.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className="flex flex-col space-y-2 sm:space-y-3"
+              >
+                <div className="flex justify-between relative h-full w-full rounded-lg">
+                  <img
+                    className="h-full w-full rounded-lg max-h-[140px] md:min-h-[260px] h-[140px] md:max-h-[240px] lg:min-h-[320px] lg:max-h-[320px]"
+                    src={item.img}
+                    alt="product-img"
+                  ></img>
+                </div>
+
+                <div className="flex justify-between text-primary-100 gap-1">
+                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">
+                    {" "}
+                    {item.name}
+                  </span>
+                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2 min-w-[30px]">
+                    4,00 €
+                  </span>
+                </div>
+              </SwiperSlide>
+            ))
+          )}
+        </Swiper>
+      </div>
+    </>
   );
 }

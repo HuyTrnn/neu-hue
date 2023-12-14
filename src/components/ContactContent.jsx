@@ -69,9 +69,6 @@ export default function ContactContent() {
               <p className="text-gray-400 text-left">
                 Montag bis Samstag: 10:00 – 20.00 Uhr
               </p>
-              <p className="text-gray-400 text-left">
-                Liefergebiete: 20354, 20457, 20459, 20095, 20097, 20099
-              </p>
 
               <div className="flex justify-between items-center justify-center">
                 <div className="flex my-4 w-2/3 lg:w-1/2 items-center justify-center">
@@ -81,7 +78,7 @@ export default function ContactContent() {
                   <div className="flex flex-col">
                     <h2 className="text-2xl">Adresse:</h2>
                     <p className="text-gray-400">
-                      5555 Tailwind RD, Pleasant Grove, UT 73533
+                      Kaiser-Wilhelm-Straße 51, 20355 Hamburg
                     </p>
                   </div>
                 </div>
@@ -92,8 +89,8 @@ export default function ContactContent() {
                   </div>
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-2xl">Telefon:</h2>
-                    <p className="text-gray-400">Tel: xxx-xxx-xxx</p>
-                    <p className="text-gray-400">Fax: xxx-xxx-xxx</p>
+                    <p className="text-gray-400">Tel: 040346339</p>
+                    <p className="text-gray-400">Instagram: neuhue.hamburg</p>
                   </div>
                 </div>
               </div>

@@ -51,11 +51,11 @@ export default function Carousel() {
       className="w-full flex flex-col justify-between items-center lg:min-h-[700px] min-h-[525px]"
       style={backgroundImageStyle}
     >
-      <div className="flex-1 flex px-20 items-center justify-between w-full">
+      <div className="flex-1 flex px-2 sm:px-20 items-center justify-between w-full">
         <button className="arrow-button" onClick={handlePreviousSlider}>
           <FaArrowLeft className="text-4xl opacity-50 " />
         </button>
-        <div className="h-full flex w-full items-center justify-center">
+        <div className="h-full flex w-full items-center justify-center max-w-[160px] sm:max-w-none">
           <img src={bg} alt="" className="opacity-30 select-none"/>
         </div>
         <button className="arrow-button" onClick={handleNextSlider}>

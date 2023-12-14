@@ -70,8 +70,7 @@ export default function Recommend() {
             </div>
           </div>
         </CSSTransition>
-
-        <div className="md:w-[33.33333%] hidden md:block md:w-[55%] flex justify-center">
+        <div className="md:w-[33.33333%] hidden md:flex md:w-[55%] flex justify-center">
           <img src={fork} className="" alt="fork" />
         </div>
         <CSSTransition

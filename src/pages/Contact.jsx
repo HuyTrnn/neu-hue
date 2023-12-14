@@ -5,7 +5,7 @@ import ContactContent from '../components/ContactContent'
 
 export default function Contact() {
   return (
-    <div className='background-contact bg-scroll h-full min-h-screen'>
+    <div className='background bg-scroll h-full min-h-screen'>
       <Header />
       <ContactContent />
       <Footer />

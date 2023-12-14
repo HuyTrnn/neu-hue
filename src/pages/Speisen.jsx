@@ -8,7 +8,7 @@ export default function Speisen() {
   const location = useLocation();
 console.log( location);
   return (
-    <div className='background-speisen'>
+    <div className='background'>
       <Header/>
       <SpeisenContent/>
       <BookingTable/>

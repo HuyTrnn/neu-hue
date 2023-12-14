@@ -15,14 +15,14 @@ export default function Footer() {
       <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 ">
           <div>
-            <p>
+            <p className="flex flex-col items-center">
               <span className="text-xs uppercase tracking-wide text-gray-400">
                 RUFEN SIE UNS AN
               </span>
 
               <a
                 href="tel:040346339"
-                className="block text-2xl font-medium  hover:text-primary-100/75 text-gray-200 sm:text-3xl"
+                className="block text-2xl font-medium w-fit hover:text-primary-100/75 text-gray-200 sm:text-3xl"
               >
                 040346339
               </a>
