@@ -1,20 +1,28 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/neu.png";
 import pho from "../assets/images/pho.png";
 import { Link} from "react-router-dom";
 import { useToggle } from "../context/ToggleContext";
 import SpeisenToggle from "./SpeisenToggle";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { IoMdContact } from "react-icons/io";
+import { useSpring, animated } from "@react-spring/web";
+
 export default function ResponsiveNav() {
   const { state, dispatch } = useToggle();
 
   const handleToggle = () => {
     dispatch({ type: "TOGGLE" });
   };
+
+  const slideLeft = useSpring({
+    transform: state.isToggled ? "translateX(0)" : "translateX(-100%)", // Adjust -100% based on your navbar width
+    opacity: state.isToggled ? 1 : 0,
+  });
   return (
-    <>
-      <div class="fixed inset-y-0 z-10 flex w-[80%] ">
+    <>  
+    {
+      state.isToggled && <animated.div style={{...slideLeft}} class="fixed inset-y-0 z-10 flex w-[80%] ">
         <svg
           class="absolute inset-0 w-full h-full text-black/70"
           style={{ filter: "drop-shadow(10px 0 10px #00000030)" }}
@@ -27,15 +35,15 @@ export default function ResponsiveNav() {
         </svg>
 
         <div class="z-10 flex flex-col flex-1">
-          <div class="flex items-center justify-between flex-shrink-0 w-full p-4">
-            <Link to="/" className="nav-bar--logo admin-logo">
+          <div class="flex items-center justify-between flex-shrink-0 w-full px-4">
+            <Link to="/" className="nav-bar--logo admin-logo w-[150px]">
               <img alt="logo" src={logo} />
             </Link>
 
             {/* Close sidebar button */}
             <button
               onClick={handleToggle}
-              class="p-1 rounded-lg focus:outline-none focus:ring mr-6"
+              class="p-3 rounded-lg focus:outline-none focus:ring mr-6"
             >
               <svg
                 class="w-6 h-6"
@@ -94,7 +102,9 @@ export default function ResponsiveNav() {
             </button>
           </div>
         </div>
-      </div>
+      </animated.div>
+    }
+      
       <div className="overlay w-[20%]"></div>
     </>
   );

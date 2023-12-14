@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
-import neu from "../assets/images/neu.png"
+import neu from "../assets/images/neu.png";
 import pho from "../assets/images/pho.png";
 import { NavLink } from "react-router-dom";
 import { MdOutlineMenuOpen } from "react-icons/md";
@@ -8,7 +8,7 @@ import ResponsiveNav from "./ResponsiveNav";
 import SpeisenToggle from "./SpeisenToggle";
 import { useToggle } from "../context/ToggleContext";
 import { useSpring, animated } from "@react-spring/web";
-import useDetectScroll from '@smakss/react-scroll-direction';
+import useDetectScroll from "@smakss/react-scroll-direction";
 import ScrollToTopButton from "./ScrollToTop";
 export default function Header() {
   const { state, dispatch } = useToggle();
@@ -26,16 +26,16 @@ export default function Header() {
     <>
       <ScrollToTopButton />
       <animated.header
-        style={{ 
+        style={{
           width: "100%",
           zIndex: 20,
           ...slideDown,
         }}
         className={`fixed ${
           state.isToggled ? "hidden " : ""
-        } top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 z-[100]`}
+        } top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 z-[100] max-w-screen py-3 md:py-0`}
       >
-        <div className=" w-fit max-w-[] h-10 flex">
+        <div className=" w-fit  h-10 flex">
           <img src={pho} alt="logo" className="text-base " />
           <img src={neu} alt="logo" className="text-base " />
         </div>
@@ -89,7 +89,8 @@ export default function Header() {
           </NavLink>
         </ul>
       </animated.header>
-      {state.isToggled && <ResponsiveNav />}
+      
+          <ResponsiveNav />
     </>
   );
 }
