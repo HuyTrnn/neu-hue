@@ -1,10 +1,10 @@
-
 import fork from "../assets/images/fork.png";
 import pho from "../assets/images/pho.png";
 import bg_into from "../assets/images/bg-intro.jpg";
 import { IoIosArrowDropright } from "react-icons/io";
 import { CSSTransition } from "react-transition-group";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 export default function Recommend() {
   const [sectionVisible, setSectionVisible] = useState(false);
   const [tagInvisible, setTagInvisible] = useState(false);
@@ -46,7 +46,11 @@ export default function Recommend() {
         }}
         className="absolute top-0 bottom-0 right-0 left-0 bg-[#ff8d0045] flex flex-col md:flex-row items-center justify-around md:px-0 px-10"
       >
-        <CSSTransition in={sectionVisible} timeout={3000} classNames="content-title">
+        <CSSTransition
+          in={sectionVisible}
+          timeout={3000}
+          classNames="content-title"
+        >
           <div className=" md:w-[33.33333%] text-center md:text-right relative md:right-[-14%] md:h-[300px] flex flex-col justify-between">
             <h2 className="text-2xl md:text-4xl text-primary-200 font-semibold lg:min-h-[80px]">
               Starters
@@ -59,18 +63,22 @@ export default function Recommend() {
                 Wir liefern Ihnen Ihre fernöstlichen Köstlichkeiten auch direkt
                 nach Hause!
               </span>
-              <button className=" group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded hover:w-fit w-[190px] transition hover:bg-primary-200 hover:text-primary-100 float-right">
-                Online bestellen{" "}
+              <Link to='/speisen' className=" group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded w-[190px] transition hover:bg-primary-200 hover:text-primary-100 float-right">
+                Alles sehen
                 <IoIosArrowDropright className="hidden group-hover:block ml-3" />
-              </button>
+              </Link>
             </div>
           </div>
         </CSSTransition>
 
         <div className="md:w-[33.33333%] hidden md:block md:w-[55%] flex justify-center">
-          <img src={fork} className="" alt="fork"/>
+          <img src={fork} className="" alt="fork" />
         </div>
-        <CSSTransition in={sectionVisible} timeout={3000} classNames="content-title">
+        <CSSTransition
+          in={sectionVisible}
+          timeout={3000}
+          classNames="content-title"
+        >
           <div className=" md:w-[33.33333%] text-center md:text-left relative md:right-[14%] md:h-[300px] flex flex-col justify-between">
             <h2 className="text-2xl md:text-4xl text-primary-200 font-semibold lg:min-h-[80px]">
               Spezialitäten aus Vietnam
@@ -83,10 +91,10 @@ export default function Recommend() {
                 Wir liefern Ihnen Ihre fernöstlichen Köstlichkeiten auch direkt
                 nach Hause!
               </span>
-              <button className="group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded hover:w-fit w-[190px] transition hover:bg-primary-200 hover:text-primary-100 md:self-start ">
-                Online bestellen{" "}
+              <Link to='speisen' className="group flex border items-center justify-center font-bold border-primary-200 py-1 text-black/80 px-6 rounded w-[190px] transition hover:bg-primary-200 hover:text-primary-100 md:self-start ">
+                Alles sehen
                 <IoIosArrowDropright className="hidden group-hover:block ml-3" />
-              </button>
+              </Link>
             </div>
           </div>
         </CSSTransition>

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
+import neu from "../assets/images/neu.png"
 import pho from "../assets/images/pho.png";
 import { NavLink } from "react-router-dom";
 import { MdOutlineMenuOpen } from "react-icons/md";
@@ -31,8 +32,9 @@ export default function Header() {
           state.isToggled ? "hidden " : ""
         } top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 z-[100]`}
       >
-        <div className="py-[16px]">
-          <img src={logo} alt="logo" />
+        <div className=" w-fit max-w-[] h-10 flex">
+          <img src={pho} alt="logo" className="text-base " />
+          <img src={neu} alt="logo" className="text-base " />
         </div>
         <MdOutlineMenuOpen
           onClick={handleToggle}

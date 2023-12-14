@@ -35,7 +35,7 @@ export default function Gallery() {
             <h2 className="text-4xl text-primary-100 font-semibold">
               Müssen versuchen
             </h2>
-            <span className="text-primary-text max-w-[600px] text-left leading-8">
+            <span className="text-primary-text max-w-[600px]  text-[20px] text-left leading-8">
               Nutzen Sie unseren Lieferservice und bestellen Sie Ihre
               asiatischen Lieblingsgerichte bequem online. Wir liefern Ihnen
               dann umgehend Ihre Bestellung nach Hause. Die Liefergebiete sind

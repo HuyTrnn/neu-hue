@@ -21,22 +21,22 @@ export default function Footer() {
               </span>
 
               <a
-                href="#"
+                href="tel:040346339"
                 className="block text-2xl font-medium  hover:text-primary-100/75 text-gray-200 sm:text-3xl"
               >
-                0123456789
+                040346339
               </a>
             </p>
 
             <ul className="mt-8 space-y-1 text-sm text-gray-200">
-              <li>Öffnungszeiten: Montag bis Samstag </li>
+              <li>Kaiser-Wilhelm-Straße 51, 20355 Hamburg</li>
               <li>10:00 – 20.00 Uhr</li>
             </ul>
 
             <ul className="mt-8 flex gap-6 justify-center">
               <li>
                 <a
-                  href="/"
+                  href="https://www.facebook.com/profile.php?id=61553723100784"
                   rel="noreferrer"
                   target="_blank"
                   className=" transition hover:opacity-75 opacity-60 text-primary-100"
@@ -60,7 +60,7 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/neuhue.hamburg/?utm_source=ig_web_button_share_sheet&igshid=YzAwZjE1ZTI0Zg=="
                   rel="noreferrer"
                   target="_blank"
                   className=" transition hover:opacity-75 opacity-60 text-primary-100"
@@ -92,26 +92,19 @@ export default function Footer() {
                 <li className="flex group">
                 <FaLocationDot className="transition text-primary-100/60 group-hover:text-primary-200 text-xl"/>
                   <p className=" transition group-hover:opacity-75 text-gray-200 cursor-pointer">
-                    Spitalerstr. 22 (Perle HH) 20095 Hamburg
-                  </p>
-                </li>
-
-                <li className="flex group">
-                <FaLocationDot className="transition text-primary-100/60 group-hover:text-primary-200 text-xl"/>
-                  <p className=" transition group-hover:opacity-75 text-gray-200 cursor-pointer">
-                    Spitalerstr. 22 (Perle HH) 20095 Hamburg
+                    Kaiser-Wilhelm-Straße 51, 20355 Hamburg
                   </p>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="font-medium text-gray-400">Company</p>
+              <p className="font-medium text-gray-400">Restaurant</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="/kontakt"
                     className="transition hover:opacity-75 text-gray-200"
                   >
                     Über uns
@@ -120,7 +113,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/neuhue.hamburg/"
                     className="transition hover:opacity-75 text-gray-200"
                   >
                     Buchungstabelle

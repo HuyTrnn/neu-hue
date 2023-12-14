@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import img1 from '../assets/images/slider1.jpg'
-import img2 from '../assets/images/slider2.jpg'
-import img3 from '../assets/images/slider3.jpg'
-import img4 from '../assets/images/slider4.jpg'
+import img1 from "../assets/images/slider6.jpg";
+import img5 from "../assets/images/disk2.jpg";
+import img2 from "../assets/images/slider2.jpg";
+import img3 from "../assets/images/slider3-3.jpg";
+import img4 from "../assets/images/slider4.jpg";
+import Tag from "./Tag";
 
 export default function Carousel() {
-  const slider = [
-    img1, img2, img3, img4
-  ];
+  const slider = [img1, img2, img3, img4, img5];
   const [currentImage, setCurrentImage] = useState(0);
   const [image, setImage] = useState(slider);
   useEffect(() => {
@@ -40,7 +40,6 @@ export default function Carousel() {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     width: "100%",
-
     maxHeight: "800px",
     transition: "background-image 0.5s ease-in-out",
   };
@@ -50,6 +49,9 @@ export default function Carousel() {
       className="w-full flex flex-col justify-between lg:min-h-[700px] min-h-[525px]"
       style={backgroundImageStyle}
     >
+      <div>
+      <Tag />
+      </div>
       <div className="flex-1 flex px-20 items-center justify-between ">
         <button className="arrow-button" onClick={handlePreviousSlider}>
           <FaArrowLeft className="text-4xl opacity-50 " />
@@ -60,32 +62,16 @@ export default function Carousel() {
       </div>
 
       <div className="flex items-center justify-center ">
-        {image.map((item, index) =>
-          item ? (
-            <div
-              key={index}
-              onClick={() => handleIndexClick(index)}
-              className={`my-2 mx-4 cursor-pointer ${
-                currentImage === index ? "border-2 border-red-500" : ""
-              }`}
-            >
-              <img
-                alt=""
-                className="w-[82px] h-[82px] object-cover"
-                src={item}
-              />
-            </div>
-          ) : (
-            <label className="mr-4" key={index}>
-              <input
-                type="radio"
-                name="slider-index"
-                checked={currentImage === index}
-                onChange={() => handleIndexClick(index)}
-              />
-            </label>
-          )
-        )}
+        {image.map((item, index) => (
+          <label className="mr-4" key={index}>
+            <input
+              type="radio"
+              name="slider-index"
+              checked={currentImage === index}
+              onChange={() => handleIndexClick(index)}
+            />
+          </label>
+        ))}
       </div>
     </div>
   );
