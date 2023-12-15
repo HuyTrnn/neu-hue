@@ -20,10 +20,10 @@ export default function ProductsCarousel() {
           pagination={{
             clickable: true,
           }}
-          // autoplay={{
-          //   delay: 2000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
           speed={1200}
           loop={true}
           modules={[Autoplay, Navigation]}
@@ -67,10 +67,10 @@ export default function ProductsCarousel() {
           pagination={{
             clickable: true,
           }}
-          // autoplay={{
-          //   delay: 2000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
           speed={1200}
           loop={true}
           modules={[Autoplay, Navigation]}
