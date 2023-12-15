@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo.png";
 import neu from "../assets/images/neu.png";
 import pho from "../assets/images/pho.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import ResponsiveNav from "./ResponsiveNav";
 import SpeisenToggle from "./SpeisenToggle";
@@ -35,10 +35,10 @@ export default function Header() {
           state.isToggled ? "hidden " : ""
         } top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 z-[100] max-w-screen py-3 md:py-0`}
       >
-        <div className=" w-fit  h-10 flex">
+        <Link to='/' className=" w-fit  h-10 flex">
           <img src={pho} alt="logo" className="text-base " />
           <img src={neu} alt="logo" className="text-base " />
-        </div>
+        </Link>
         <MdOutlineMenuOpen
           onClick={handleToggle}
           className="block sm:hidden text-[40px] text-primary-100"

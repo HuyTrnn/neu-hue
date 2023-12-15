@@ -3,7 +3,7 @@ import img from "../assets/images/slider3.jpg";
 import { FaLocationDot } from "react-icons/fa6";
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 lg:grid lg:grid-cols-5">
+    <footer className="bg-[#2d0307] lg:grid lg:grid-cols-5">
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
         <img
           src={img}

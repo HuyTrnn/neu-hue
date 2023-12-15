@@ -4,13 +4,13 @@ import img1 from "../assets/images/slider6.jpg";
 import img5 from "../assets/images/disk2.jpg";
 import img2 from "../assets/images/slider2.jpg";
 import img3 from "../assets/images/slider3-3.jpg";
-import img4 from "../assets/images/slider4.jpg";
+
 import bg from '../assets/images/pho-dark.png'
 import neu from '../assets/images/neu.png'
 import Tag from "./Tag";
 
 export default function Carousel() {
-  const slider = [img1, img2, img3, img4, img5];
+  const slider = [img1, img2, img3, img5];
   const [currentImage, setCurrentImage] = useState(0);
   const [image, setImage] = useState(slider);
   useEffect(() => {

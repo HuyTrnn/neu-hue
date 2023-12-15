@@ -28,6 +28,8 @@
   color: #61dafb;
 }
 
+
+
 .background {
   background-image: url("../src/assets/images/background.png");
   background-repeat: repeat-y;
@@ -71,6 +73,12 @@
     background-repeat: repeat-y;
     background-size: contain;
     background-attachment: unset;
+  }
+  .carousel-items {
+    min-height: 140px;
+  }
+  .swiper-slide {
+    min-height: 150px;
   }
 }
 

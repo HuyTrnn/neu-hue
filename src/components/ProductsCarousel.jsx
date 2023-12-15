@@ -35,16 +35,16 @@ export default function ProductsCarousel() {
                 key={index}
                 className="flex flex-col space-y-2 sm:space-y-3"
               >
-                <div className="flex justify-between relative h-full w-full rounded-lg">
+                <div className="carousel-items flex justify-between relative h-full w-full rounded-lg min-h-[140px]">
                   <img
-                    className="h-full w-full rounded-lg max-h-[140px] md:min-h-[260px] h-[140px] md:max-h-[240px] lg:min-h-[320px] lg:max-h-[320px]"
+                    className="h-full w-full rounded-lg max-h-[140px] sm:min-h-[200px] md:min-h-[260px]  md:max-h-[240px] lg:min-h-[320px] lg:max-h-[320px]"
                     src={item.img}
                     alt="product-img"
                   ></img>
                 </div>
 
-                <div className="flex justify-between text-primary-100">
-                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">
+                <div className="flex justify-between text-primary-100 flex-row sm:flex-col items-center">
+                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-2">
                     {" "}
                     {item.name}
                   </span>
@@ -84,13 +84,13 @@ export default function ProductsCarousel() {
               >
                 <div className="flex justify-between relative h-full w-full rounded-lg">
                   <img
-                    className="h-full w-full rounded-lg max-h-[140px] md:min-h-[260px] h-[140px] md:max-h-[240px] lg:min-h-[320px] lg:max-h-[320px]"
+                    className="h-full w-full rounded-lg max-h-[140px] h-[100px] "
                     src={item.img}
                     alt="product-img"
                   ></img>
                 </div>
 
-                <div className="flex justify-between text-primary-100 gap-1">
+                <div className="flex justify-between text-primary-100 gap-1 ">
                   <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">
                     {" "}
                     {item.name}
