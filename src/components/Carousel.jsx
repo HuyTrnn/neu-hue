@@ -3,7 +3,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import img1 from "../assets/images/slider6.jpg";
 import img5 from "../assets/images/disk2.jpg";
 import img2 from "../assets/images/slider2.jpg";
-import img3 from "../assets/images/slider3-3.jpg";
+import img3 from "../assets/images/slider3.jpg";
 import bg from "../assets/images/pho-dark.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
