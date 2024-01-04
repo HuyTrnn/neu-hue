@@ -11,7 +11,7 @@ export default function Content() {
 
   return (
     <div className="background h-full min-h-screen ">
-      <div className="max-h-[750px]">
+      <div className="max-h-[750px] h-[700px]">
       <Carousel />
       </div>
       <Introduce/>
