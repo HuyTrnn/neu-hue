@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "../components/css/carousel.scss";
-import img1 from "../assets/images/slider6.jpg";
-import img5 from "../assets/images/disk2.jpg";
+import img1 from "../assets/images/slider1.jpg";
 import img2 from "../assets/images/slider2.jpg";
 import img3 from "../assets/images/slider3.jpg";
+import img4 from "../assets/images/slider4.jpg";
+import img5 from "../assets/images/slider5.jpg";
+import img6 from "../assets/images/slider6.jpg";
 import bg from "../assets/images/pho-dark.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -22,56 +24,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 export default function Carousel() {
-  const [isBlue, setIsBlue] = useState(false);
-  const slider = [img1, img2, img3, img5];
-  const handleInputChange = () => {
-    setIsBlue((prevIsBlue) => !prevIsBlue);
-  };
-
-  const isPrevSlide = (swiper) => {
-    // Check if the current slide has the class swiper-slide-prev
-    return swiper.slides[swiper.activeIndex]?.classList.contains(
-      "swiper-slide-prev"
-    );
-  };
+  const slider = [img1, img2, img3, img4, img5, img6];
 
   return (
-    //  <div className="carousels h-full flex flex-col items-center justify-center">
-    //    <div className={`container ${isBlue ? "blue" : ""}`}>
-    //     <input type="radio" name="slider" id="item-1" defaultChecked />
-    //     <input type="radio" name="slider" id="item-2" />
-    //     <input type="radio" name="slider" id="item-3" />
-    //     {/* <input type="radio" name="slider" id="item-4" /> */}
-    //     {/* <input type="radio" name="slider" id="item-5" /> */}
-    //     <div className="cards">
-    //       <label class="card" for="item-1" id="song-1">
-    //         <img
-    //           src={img1}
-    //           alt="song"
-    //         />
-    //       </label>
-    //       <label class="card" for="item-2" id="song-2">
-    //         <img
-    //           src={img2}
-    //           alt="song"
-    //         />
-    //       </label>
-    //       <label class="card" for="item-3" id="song-3">
-    //         <img
-    //           src={img3}
-    //           alt="song"
-    //         />
-    //       </label>
-    //       <label class="card" for="item-3" id="song-4">
-    //         <img
-    //           src={img5}
-    //           alt="song"
-    //         />
-    //       </label>
-    //     </div>
-    //   </div>
-    //  </div>
-
     <Swiper
       effect="coverflow"
       grabCursor={true}
@@ -86,20 +41,17 @@ export default function Carousel() {
         slideShadows: true,
       }}
       modules={[Navigation, Pagination, Autoplay]}
-      // autoplay={{
-      //   delay: 4000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
       loop={true}
       pagination={{
         el: ".swiper-pagination",
         clickable: true,
       }}
-      onSlideChange={(swiper) => {
-        // Force re-render on slide change to update the overlay color
-        isPrevSlide(swiper);
-      }}
-      className="carousels"
+
+      className="carousels h-full max-h-[720px]"
     >
       {slider.map((item, index) => (
         <div
