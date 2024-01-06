@@ -84,7 +84,7 @@ export default function ProductsCarousel() {
               >
                 <div className="flex justify-between relative h-full w-full rounded-lg">
                   <img
-                    className="h-full w-full rounded-lg max-h-[140px] h-[100px] "
+                    className="h-full w-full rounded-lg max-h-[140px] h-[100px] min-h-[140px] "
                     src={item.img}
                     alt="product-img"
                   ></img>

@@ -1,76 +1,87 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function SpeisenToggle({isNav}) {
-  const navigate = useNavigate()
-    const foodCategory = [
+export default function SpeisenToggle({ isNav }) {
+  const navigate = useNavigate();
+  const foodCategory = [
+    {
+      category: "VORSPEISEN",
+      items: [{ name: "Reisgerichte Curry" }, { name: "Peking Suppe..." }],
+    },
+    {
+      category: "HAUPTSPEISEN",
+      items: [
         {
-          category: "DAC BIET",
-          items: [
-            {
-              name: "Dac Biet",
-            },
-            {
-              name: "Reisgerichte Curry",
-            },
-            {
-              name: "Chua Ngot / SuBsauer SoBe",
-            },
-            {
-              name: "Reisgerichte Mango mit Gemuse-Sauce",
-            },
-            {
-              name: "Reis Gerichte Penuts",
-            },
-          ],
+          name: "My Xoo Vietnam / Vietnamese Noodles",
         },
         {
-          category: "GERICHTE",
-          items: [
-            {
-              name: "Gegrilltes Fleites",
-            },
-            {
-              name: "Gegrilltes Fleisch",
-            },
-            {
-              name: "Gegrilltes Fleisch mit Gemuse in housgemachter in Mango-Sauce",
-            },
-            {
-              name: "Gegrilltes Fleisch mit Ananas und Wok-Gemuse in suBsaurer SoBe",
-            },
-            {
-              name: "Gegrilltes Fleisch mit Gemuse in housgemachter Erdnusssauce",
-            },
-          ],
+          name: "Udon Xao/Udon Noodles...",
         },
-      ];
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        } 
-      };
+      ]
+    },
+    {
+      category: "BOWLS",
+      items: [{ name: "Tofu Bowl" }, { name: "Chicken Bowl" }],
+    },
+    {
+      category: "DAC BIET",
+      items: [
+        {
+          name: "Dac Biet",
+        },
+        {
+          name: "Reisgerichte Curry...",
+        },
+      ],
+    },
+    {
+      category: "GERICHTE",
+      items: [
+        {
+          name: "Gegrilltes Fleites",
+        },
+        {
+          name: "Gegrilltes Fleisch...",
+        },
+      ],
+    },
+    {
+      category: "DESSERTS",
+      items: [
+        {
+          name: "Gebackene Banane...",
+        },
+      ],
+    },
+  ];
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
-      <ul className={`${isNav ? "" : 'list-speisen absolute bg-black/70'}  min-w-[200px] top-[46px] w-fit h-fit text-white  text-left px-3 py-2 transition duration-150 ease-out`}>
+      <ul
+        className={`${
+          isNav ? "" : "list-speisen absolute bg-black/70"
+        }  min-w-[200px] top-[46px] w-fit h-fit text-white  text-left px-3 py-2 transition duration-150 ease-out`}
+      >
         <div className="border-2 border-primary-100 top-[-22px] left-0 absolute border-l-transparent border-b-black/70 border-b-[20px] border-r-[20px] border-l-[20px] border-r-transparent"></div>
         <div className="top-[-22px] left-0 absolute w-[96px] h-6"></div>
         {foodCategory.map((category, index) => (
           <li
-            onClick={() =>
-              {
-                scrollToSection(
-                  `${category.category.toLowerCase().replace(/\s+/g, "-")}`
-                )
-                navigate('/speisen', { state: { key: "value" } })
-              }
-            }
+            onClick={() => {
+              scrollToSection(
+                `${category.category.toLowerCase().replace(/\s+/g, "-")}`
+              );
+              navigate("/speisen", { state: { key: "value" } });
+            }}
             key={index}
             className=""
           >
-            <p className="text-primary-100">{category.category}</p>
+            <p className="text-primary-100 text-base">{category.category}</p>
             {category.items.map((food, index) => (
               <div
                 key={index}
@@ -84,6 +95,7 @@ export default function SpeisenToggle({isNav}) {
             ))}
           </li>
         ))}
+        <li className="text-primary-100 text-[12px] text-center hover:underline"><Link to={'/speisen'}>Mehr sehen...</Link></li>
       </ul>
     </div>
   );

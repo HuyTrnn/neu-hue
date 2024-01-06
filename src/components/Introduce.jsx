@@ -3,7 +3,7 @@ import Tag from "./Tag";
 import { CSSTransition } from "react-transition-group";
 export default function Introduce() {
   const [sectionVisible, setSectionVisible] = useState(false);
-  const [tagInvisible, setTagInvisible] = useState(false)
+  const [tagInvisible, setTagInvisible] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("introduce");
@@ -11,7 +11,7 @@ export default function Introduce() {
         const { top, bottom } = section.getBoundingClientRect();
         if (top < window.innerHeight && bottom >= 0) {
           setSectionVisible(true);
-          setTagInvisible(true)
+          setTagInvisible(true);
         } else {
           setSectionVisible(false);
         }
@@ -38,21 +38,18 @@ export default function Introduce() {
               Fine Asian Fusion Kitchen
             </h2>
             <span className="text-primary-text text-[20px] max-w-[600px] text-left leading-8">
-              Unsere asiatische Küche ist bunt und vielfältig! Ob als
-              Mittagstisch oder komplettes Abendmenue: Wir haben die besten
-              Gerichte von Vietnamesisch bis Sushi für Dich zusammengestellt.
-              Wir liefern Ihnen Ihre fernöstlichen Köstlichkeiten auch direkt
-              nach Hause!
+              Mittagskarte, die eine bunte Mischung aus vietnamesischen
+              Gerichten für 10,90 Euro bereithält, bietet das freundliche Team
+              im Service und in der Küche auch eine Bandbreite an Klassikern wie
+              Rotes Curry, Udon-Nudeln und Pho-Suppe. Alle Gerichte sind
+              individuell mit Tofu, Hähnchen, Rind, krossem Hähnchen, Ente oder
+              Garnelen bestellbar.
             </span>
           </div>
         </CSSTransition>
 
         <div className="flex lg:flex-row flex-col gap-8 justify-between mt-5">
-          <CSSTransition
-            in={tagInvisible}
-            timeout={200}
-            classNames="tag-left"
-          >
+          <CSSTransition in={tagInvisible} timeout={200} classNames="tag-left">
             <Tag />
           </CSSTransition>
 
@@ -63,11 +60,7 @@ export default function Introduce() {
           >
             <Tag />
           </CSSTransition>
-          <CSSTransition
-            in={tagInvisible}
-            timeout={200}
-            classNames="tag-right"
-          >
+          <CSSTransition in={tagInvisible} timeout={200} classNames="tag-right">
             <Tag />
           </CSSTransition>
         </div>

@@ -27,7 +27,7 @@ export default function SpeisenMenu({ title, data }) {
     >
       <div className="flex gap-5 items-center justify-center mt-10">
         <hr className="bg-black text-black border-primary-100 border-t-[0.5px] w-full my-8"></hr>
-        <h2 className="text-4xl text-primary-100 font-bold min-w-[200px]">
+        <h2 className="text-4xl text-primary-100 font-bold">
           {title}
         </h2>
         <hr className="bg-black text-black border-primary-100 border-t-[0.5px] w-full my-8"></hr>
