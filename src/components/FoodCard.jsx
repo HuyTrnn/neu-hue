@@ -16,12 +16,17 @@ export default function FoodCard({ food, index }) {
           alt="product-img"
           className="w-full h-full rounded-lg"
         />
-        <div className="absolute top-0 flex  h-full w-full items-center justify-center p-10 sm:p-0 w-full ">
+        {/* <div className="absolute top-0 flex  h-full w-full items-center justify-center p-10 sm:p-0 w-full ">
           <span className="font-bold text-lg text-primary-100 bg-black/50 line-clamp-2 w-full">
             {food.description}
           </span>
-        </div>
+        </div> */}
       </div>
+      <span
+        class="font-bold text-[12px] text-primary-100 bg-/50 line-clamp-2 w-full min-h-[36px]"
+      >
+        {food.description}
+      </span>
       <hr className="bg-black text-black border-primary-100 border-t-[0.5px] w-full my-3"></hr>
       <div className="flex flex-col w-full">
         {food.price ? (

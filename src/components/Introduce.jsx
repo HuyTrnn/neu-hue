@@ -35,15 +35,13 @@ export default function Introduce() {
         >
           <div className="flex flex-col gap-4 justify-center items-center">
             <h2 className="text-4xl text-primary-100 font-semibold">
-              Fine Asian Fusion Kitchen
+              Neueröffnung in Hamburgs Innenstadt
             </h2>
             <span className="text-primary-text text-[20px] max-w-[600px] text-left leading-8">
-              Mittagskarte, die eine bunte Mischung aus vietnamesischen
-              Gerichten für 10,90 Euro bereithält, bietet das freundliche Team
-              im Service und in der Küche auch eine Bandbreite an Klassikern wie
-              Rotes Curry, Udon-Nudeln und Pho-Suppe. Alle Gerichte sind
-              individuell mit Tofu, Hähnchen, Rind, krossem Hähnchen, Ente oder
-              Garnelen bestellbar.
+              Neben einer wechselnden Mittagskarte, die eine bunte Mischung aus
+              vietnamesischen Gerichten für 10,90 Euro bereithält, bietet das
+              freundliche Team im Service und in der Küche auch eine Bandbreite
+              an Klassikern wie Rotes Curry, Udon-Nudeln und Pho-Suppe.
             </span>
           </div>
         </CSSTransition>
