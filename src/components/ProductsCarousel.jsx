@@ -44,7 +44,7 @@ export default function ProductsCarousel() {
                 </div>
 
                 <div className="flex justify-between text-primary-100 flex-row sm:flex-col items-center">
-                  <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-2">
+                  <span className="z-10 font-bold text-center sm:text-base text-xs sm:line-clamp-2">
                     {" "}
                     {item.name}
                   </span>

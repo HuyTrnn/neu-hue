@@ -3,7 +3,15 @@ import img2 from "../assets/images/disk2.jpg";
 import img3 from "../assets/images/disk3.jpg";
 import img4 from "../assets/images/disk4.jpg";
 import img5 from "../assets/images/disk5.jpg";
-
+import img7 from "../assets/images/disk6.jpg";
+import img8 from "../assets/images/xoisoai.jpg";
+import img9 from "../assets/images/slider7.jpg";
+import img10 from "../assets/images/slider3.jpg";
+import dessert1 from "../assets/images/dessert1.jpg";
+import dessert2 from "../assets/images/dessert2.jpg";
+import dessert3 from "../assets/images/dessert3.jpg";
+import dessert4 from "../assets/images/dessert4.jpeg";
+import dessert5 from "../assets/images/dessert5.jpg";
 
 export const foodCategory = [
   {
@@ -363,7 +371,7 @@ export const foodCategory = [
 //       ],
 //     },
 //     {
-//       name: "MANGO - Gegrilltes Fleisch",
+//       name: "MANGO - Gegrilltes Fleisch ",
 //       img: img3,
 //       description: "mit Gemuse in housgemachter in Mango-Sauce",
 //       foods: [
@@ -418,7 +426,7 @@ export const foodCategory = [
 //       ],
 //     },
 //     {
-//       name: "PEANUT - Gegrilltes Fleisch",
+//       name: "PEANUT - Gegrilltes Fleisch ",
 //       img: img7,
 //       description: "Gegrilltes Fleisch mit Gemüse in hausgemachter Erdnusssauce",
 //       foods: [
