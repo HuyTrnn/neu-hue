@@ -34,7 +34,7 @@ export default function CarouselMobile() {
       delay: 4000,
       disableOnInteraction: false,
     }}
-    modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
+    modules={[Navigation, A11y, EffectFade, Autoplay]}
     navigation
     pagination={{ clickable: true }}
     scrollbar={{ draggable: true }}

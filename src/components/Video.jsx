@@ -4,7 +4,7 @@ const Video = ({url}) => {
   return (
     <div>
       <h1>Video </h1>
-      <video width="560" height="315" className='max-h-[200px] md:max-h-[350px] bg-black/80' controls autoPlay loop muted>
+      <video width="560" height="315" className='max-h-[200px] md:max-h-[350px] bg-black/80' controls loop muted>
         <source
           src={url}
           controls
