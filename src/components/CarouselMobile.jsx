@@ -46,7 +46,7 @@ export default function CarouselMobile() {
           <img
             src={item}
             alt=""
-            className="w-full h-full lg:min-h-[700px] min-h-[625px] max-h-[720px]"
+            className="w-full h-full lg:min-h-[700px] min-h-[700px] max-h-[700px]"
           />
         </SwiperSlide>
       </div>
