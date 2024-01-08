@@ -281,7 +281,7 @@ const HAUPTSPEISEN = {
   category: "HAUPTSPEISEN",
   items: [
     {
-      name: "My Xoo Vietnam / Vietnamese Noodles",
+      name: "My Xao Vietnam / Vietnamese Noodles",
       img: commingSoon,
       description: "",
       foods: getFood(9.9, 12.0, 11.9, 14.9, 12.9, 14.9),

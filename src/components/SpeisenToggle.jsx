@@ -13,7 +13,7 @@ export default function SpeisenToggle({ isNav }) {
       category: "HAUPTSPEISEN",
       items: [
         {
-          name: "My Xoo Vietnam / Vietnamese Noodles",
+          name: "Reisgerichte Curry",
         },
         {
           name: "Udon Xao/Udon Noodles...",
