@@ -7,7 +7,7 @@ export default function SpeisenToggle({ isNav }) {
   const foodCategory = [
     {
       category: "VORSPEISEN",
-      items: [{ name: "Reisgerichte Curry" }, { name: "Peking Suppe..." }],
+      items: [{ name: "Mini-Frühlingsrollen" }, { name: "Peking Suppe..." }],
     },
     {
       category: "HAUPTSPEISEN",

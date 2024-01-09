@@ -59,7 +59,7 @@ const VORSPEISEN = {
   category: "VORSPEISEN",
   items: [
     {
-      name: "Reisgerichte Curry",
+      name: "Mini-Frühlingsrollen",
       img: commingSoon,
       description: "",
       foods: [
