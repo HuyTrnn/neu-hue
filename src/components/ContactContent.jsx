@@ -15,7 +15,7 @@ export default function ContactContent() {
   } = useForm()
   const onSubmit = async (data) => {
     try {
-      const apiUrl = 'https://neuhue-restaurant-fxyn.onrender.com/dhuy782/contact/api';
+      const apiUrl = 'https://neuhue-restaurant-fxyn.onrender.com/dhuy782/api/contact';
 
       // You can replace 'yourRequestBody' with the actual data you want to send
 
