@@ -1,15 +1,13 @@
 import commingSoon from "../assets/images/coming_soon.jpg";
-import dessert1 from "../assets/images/dessert1.jpg";
-import dessert2 from "../assets/images/dessert2.jpg";
-import dessert3 from "../assets/images/dessert3.jpg";
-import dessert4 from "../assets/images/dessert4.jpeg";
-import dessert5 from "../assets/images/dessert5.jpg";
+import banane from "../assets/images/DESERT/gebackenebanane.jpg";
 import {
   TofuineinmePankoMehi,
   DimsumGarnelen,
   Edamame,
   NemRan,
   Tofu,
+  Friesavocado,
+  Xoixoai,
 } from "../assets/imagesVor";
 import {
   Bunreisnudelnfruhlingsrollen,
@@ -75,13 +73,13 @@ const VORSPEISEN = {
       description: "",
       foods: [
         {
-          name: "(eicht sover-schart) mit Enteftleisch, Gemüse undEl",
+          name: "(leicht sauer-scharf) mit Entefleisch, Gemüse und Ei",
           price: 4.5,
         },
       ],
     },
     {
-      name: "Wan Tan Suppe Teigtaschen.",
+      name: "Wan Tan Suppe.",
       img: commingSoon,
       description: "",
       foods: [
@@ -99,7 +97,7 @@ const VORSPEISEN = {
       name: "Tom Kha Gai (leicht- scharf)",
       img: commingSoon,
       description:
-        "Kokosmich-Suppe mit Hühnerfleisch, Thai Bosllikum und Zitronengras",
+        "Kokosmich-Suppe mit Hühnerfleisch, Thai Basilikum und Zitronengras",
       foods: [
         {
           name: "Tofu",
@@ -118,7 +116,7 @@ const VORSPEISEN = {
     {
       name: "Sup Mien/ Glas Noodle Soup",
       img: commingSoon,
-      description: "würzige Suppe, Glasnudeln und Gemuse",
+      description: "würzige Suppe, Glasnudeln und Gemüse",
       foods: [
         {
           name: "Tofu",
@@ -260,7 +258,7 @@ const VORSPEISEN = {
     },
     {
       name: "Fries Avocado",
-      img: commingSoon,
+      img: Friesavocado,
       description:
         "Frische Avocado mit einem Knusprigen TempuraMantel. überzogen von einer Mango Sauce mit gerösteten Sesam",
       price: 5.5,
@@ -268,7 +266,7 @@ const VORSPEISEN = {
     },
     {
       name: "Xôi Xoài",
-      img: commingSoon,
+      img: Xoixoai,
       description:
         "schwarzer Klebreis mit geösteten Erdnüssen, Mangostücken und einer Kokossauce",
       price: 6.5,
@@ -296,7 +294,7 @@ const HAUPTSPEISEN = {
     {
       name: "Pho Xao/Reisbandnudeln",
       img: commingSoon,
-      description: "ebraten mit frischem Gemüse",
+      description: "gebraten mit frischem Gemüse",
       foods: getFood(),
     },
     {
@@ -306,16 +304,16 @@ const HAUPTSPEISEN = {
       foods: getFood(),
     },
     {
-      name: "Com Rang/gebraten",
+      name: "Com Rang/gebraten Reis",
       img: Comrang,
-      description: "Reis gebraten Reis mit frischem Wok-Gemüse",
+      description: "gebraten Reis mit frischem Wok-Gemüse",
       foods: getFood(),
     },
     {
       name: "Pho/Reisbandnudelsuppe",
       img: Phoreisbandnudelsuppehahnchen,
       description:
-        "Reisbandnudelsuppe in einer würzigen Rinderbrühe mit Koriander, Lauchzwiebeln Und Krouter",
+        "Reisbandnudelsuppe in einer würzigen Rinderbrühe mit Koriander, Lauchzwiebeln Und Kräuter",
       foods: [
         {
           name: "Tofu",
@@ -395,7 +393,7 @@ const BOWLS = {
       name: "BOWLS",
       img: Tofubowl,
       description:
-        "Sushi-Reis, Gurke, Wakame, Papriko, Mango, Avocado, Sesam, Edamame, Chia",
+        "Sushi-Reis, Gurke, Wakame, Paprika, Mango, Avocado, Sesam, Edamame, Chia",
       foods: [
         {
           name: "Tofu Bowl",
@@ -432,7 +430,7 @@ const DACBIET = {
           price: 11.9,
         },
         {
-          name: "Hahnchen",
+          name: "Hähnchen",
           price: 12.9,
         },
         {
@@ -496,7 +494,7 @@ const DACBIET = {
     {
       name: "Chua Ngot / SuBsauer SoBe",
       img: commingSoon,
-      description: "Wok-Gemüse in hausgemachter süßsaurer Soße",
+      description: "Wok-Gemüse in hausgemachter Süßsauer Soße",
       foods: [
         {
           name: "Tofu",
@@ -564,7 +562,7 @@ const DACBIET = {
       ],
     },
     {
-      name: "Reis Gerichte Penuts",
+      name: "Reis Gerichte Peanut",
       img: commingSoon,
       description: "Wok-Gemüse in hausgemachter Erdnüsse-Sauce",
       foods: [
@@ -611,7 +609,7 @@ const GERICHTE = {
         "mit Gemüse Zitronengras, Limetten in dunkler hausgemachter Soße",
       foods: [
         {
-          name: "Hähnchenfile",
+          name: "Hähnchenfilet",
           price: 14.9,
         },
         {
@@ -635,7 +633,7 @@ const GERICHTE = {
         "mit Gemüse, Basilikum in Kokosmilch, rotem Curry, leicht scharf",
       foods: [
         {
-          name: "Hähnchenfile",
+          name: "Hähnchenfilet",
           price: 14.9,
         },
         {
@@ -655,10 +653,10 @@ const GERICHTE = {
     {
       name: "MANGO - Gegrilltes Fleisch ",
       img: commingSoon,
-      description: "mit Gemuse in housgemachter in Mango-Sauce",
+      description: "mit Gemuse in hausgemachter in Mango-Sauce",
       foods: [
         {
-          name: "Hähnchenfile",
+          name: "Hähnchenfilet",
           price: 14.9,
         },
         {
@@ -681,7 +679,7 @@ const GERICHTE = {
       description: "mit Ananas und Wok-Gemüse in süßsaurer Soße",
       foods: [
         {
-          name: "Hähnchenfile",
+          name: "Hähnchenfilet",
           price: 14.9,
         },
         {
@@ -712,7 +710,7 @@ const GERICHTE = {
         "Gegrilltes Fleisch mit Gemüse in hausgemachter Erdnusssauce",
       foods: [
         {
-          name: "Hähnchenfile",
+          name: "Hähnchenfilet",
           price: 14.9,
         },
         {
@@ -737,28 +735,28 @@ const DESSERTS = {
   items: [
     {
       name: "Gebackene Banane",
-      img: dessert1,
+      img: banane,
       description: "mit einer Kugel Vanille-Eis, auf Wunsch mit Honig",
       price: 4.9,
       foods: [],
     },
     {
       name: "gebackene Ananas",
-      img: dessert2,
+      img: commingSoon,
       description: "mit einer Kugel Vanille-Eis, auf Wunsch mit Honig",
       price: 4.9,
       foods: [],
     },
     {
       name: "gebackene Eis im Teigmantel mit Honig",
-      img: dessert3,
+      img: commingSoon,
       description: "",
       price: 6.5,
       foods: [],
     },
     {
       name: "Sesambällchen",
-      img: dessert4,
+      img: commingSoon,
       description:
         "Sesambällchen, gefüllt mit süßer Bohnenpaste und einer Kugel Eis Vanille",
       price: 5.5,
@@ -766,7 +764,7 @@ const DESSERTS = {
     },
     {
       name: "Kem (zwei Kugeln Eis)",
-      img: dessert5,
+      img: commingSoon,
       description: "Sorten: Mango, Kokos, Vanille",
       price: 3.0,
       foods: [],
