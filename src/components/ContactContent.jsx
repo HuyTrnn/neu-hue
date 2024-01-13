@@ -14,6 +14,7 @@ export default function ContactContent() {
     formState: { errors },
   } = useForm()
   const onSubmit = async (data) => {
+    console.log(data);
     try {
       const apiUrl = 'https://neuhue-restaurant-fxyn.onrender.com/dhuy782/api/contact';
 
@@ -28,7 +29,7 @@ export default function ContactContent() {
         body: JSON.stringify(data),
       });
 
-      const data = await response.json().then(()=> {
+      const res = await response.json().then(()=> {
         toast.success('Erfolg !')
         setTimeout(()=> {
           navigate('/')

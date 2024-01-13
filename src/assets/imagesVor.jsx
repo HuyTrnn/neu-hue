@@ -7,7 +7,8 @@ import NemRan from "./images/VORSPEISEN/NemRan.jpg";
 import Tofu from "./images/VORSPEISEN/Tofu.jpg";
 import Friesavocado from "./images/VORSPEISEN/Friesavocado.jpg"
 import Xoixoai from "./images/VORSPEISEN/Xoixoai.jpg"
+import Lilletwildberry from './images/VORSPEISEN/Lilletwildberry.jpg'
 
 
-export { Tofu, NemRan, Edamame, DimsumGarnelen, TofuineinmePankoMehi, Friesavocado, Xoixoai };
+export { Tofu, NemRan, Edamame, DimsumGarnelen, TofuineinmePankoMehi, Friesavocado, Xoixoai, Lilletwildberry };
 

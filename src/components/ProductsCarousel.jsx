@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 // import require module
 import { Navigation, Autoplay } from "swiper/modules";
-import { foodCategory } from "../constants/Menu";
+import { productsRecommend } from "../constants/ProductsRecomment";
 
 export default function ProductsCarousel() {
   return (
@@ -29,7 +29,7 @@ export default function ProductsCarousel() {
           modules={[Autoplay, Navigation]}
           className="mySwiper swiper-slide text-white cursor-pointer max-w-screen z-50 "
         >
-          {foodCategory.map((category, index) =>
+          {productsRecommend.map((category, index) =>
             category.items.map((item, index) => (
               <SwiperSlide
                 key={index}
@@ -49,7 +49,7 @@ export default function ProductsCarousel() {
                     {item.name}
                   </span>
                   <span className="z-10 font-bold text-left sm:text-base text-xs sm:line-clamp-3 line-clamp-2">
-                    4,00 €
+                    {item.price ? <span>{item.price} €</span> : <><span>{item.foods[0]?.price}€</span> - <span>{item.foods[item.foods.length - 1]?.price}€</span></>}
                   </span>
                 </div>
               </SwiperSlide>
@@ -76,7 +76,7 @@ export default function ProductsCarousel() {
           modules={[Autoplay, Navigation]}
           className="mySwiper swiper-slide text-white cursor-pointer max-w-screen z-50 "
         >
-          {foodCategory.map((category, index) =>
+          {productsRecommend.map((category, index) =>
             category.items.map((item, index) => (
               <SwiperSlide
                 key={index}
