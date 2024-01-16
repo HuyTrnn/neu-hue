@@ -47,7 +47,7 @@ export default function SpeisenMenu({ title, data }) {
       >
         <div
           id="list-food"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-6 gap-x-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-6 gap-x-[5rem]"
         >
           {data.slice(0, itemsToShow).map((food, index) => (
             <FoodCard food={food} key={index} index={index + 1} />

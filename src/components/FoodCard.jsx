@@ -14,7 +14,7 @@ export default function FoodCard({ food, index }) {
         <img
           src={food.img || ""}
           alt="product-img"
-          className="w-full h-full rounded-lg"
+          className="w-full h-full rounded-lg object-fill"
         />
         {/* <div className="absolute top-0 flex  h-full w-full items-center justify-center p-10 sm:p-0 w-full ">
           <span className="font-bold text-lg text-primary-100 bg-black/50 line-clamp-2 w-full">
@@ -36,10 +36,10 @@ export default function FoodCard({ food, index }) {
         ) : (
           food.foods.map((item, index) => (
             <div className="flex justify-between" key={index}>
-              <span className="font-bold text-base line-clamp-2 text-primary-100 text-justify">
+              <span className="font-bold text-base line-clamp-2 text-primary-100 text-left max-w-[80%]">
                 {item.name}:
               </span>
-              <span className="font-bold text-base line-clamp-2 text-primary-100 text-justify">
+              <span className="font-bold text-base line-clamp-2 text-primary-100 text-left">
                 {item.price} €
               </span>
             </div>

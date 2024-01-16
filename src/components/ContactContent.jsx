@@ -1,54 +1,74 @@
-import React from "react";
+import { useRef, useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
 import neon from "../assets/images/slider2.jpg";
-import { useForm, SubmitHandler } from "react-hook-form"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useForm, SubmitHandler } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { IoIosArrowDropright } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 export default function ContactContent() {
-  const navigate = useNavigate()
+  const emailRef = useRef();
+  const nameRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm()
-  const onSubmit = async (data) => {
-    console.log(data);
-    try {
-      const apiUrl = 'https://neuhue-restaurant-fxyn.onrender.com/dhuy782/api/contact';
+  } = useForm();
+
+  useEffect(() => emailjs.init("jRNdHRU4JF2C2WFGW"), []);
+
+  const apiUrl =
+      "https://neuhue-restaurant-fxyn.onrender.com/dhuy782/api/contact";
+  const sendFeedback = async(data) => {
 
       // You can replace 'yourRequestBody' with the actual data you want to send
 
-      const response = await fetch(apiUrl, {
-        method: 'POST',
+      await fetch(apiUrl, {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           // Add any additional headers if needed
         },
         body: JSON.stringify(data),
-      });
-
-      const res = await response.json().then(()=> {
-        toast.success('Erfolg !')
-        setTimeout(()=> {
-          navigate('/')
-        }, 3000)
-      });
-    } catch (error) {
-      toast.error('Ein Fehler ist aufgetreten')
-      console.error('Error calling API:', error);
-    }
+      })
   }
+
+  const onSubmit = async (data) => {
+    const serviceId = "service_1o87llb";
+    const templateId = "template_0izvmni";
+    try {
+      const send = await emailjs.send(serviceId, templateId, {
+        name: data.firstname + data.lastname,
+        recipient: data.email,
+        message: data.content,
+      });
+      await sendFeedback(data).then(() => {
+        toast.success("Erfolg !");
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      })
+      
+    } catch (error) {
+      toast.error("Ein Fehler ist aufgetreten");
+      console.error("Error calling API:", error);
+    }
+  };
   return (
     <div className="flex flex-col">
-    <ToastContainer />
+      <ToastContainer />
       <div className="flex ">
         <img src={neon} alt="" className="w-full h-[420px]" />
       </div>
       <div className="flex  justify-center items-center w-screen min-h-screen ">
         <div className="container mx-auto my-4 px-4 lg:px-20 flex  flex-col md:flex-row justify-center items-center flex-1">
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full md:w-[50%] p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-15 mr-auto rounded-2xl shadow-2xl">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full md:w-[50%] p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-15 mr-auto rounded-2xl shadow-2xl"
+          >
             <div className="flex">
               <h1 className="font-bold uppercase text-5xl text-primary-100">
                 SENDEN SIE UNS A <br /> NACHRICHT
@@ -88,7 +108,10 @@ export default function ContactContent() {
               ></textarea>
             </div>
             <div className="">
-              <button type="submit" className="group flex border items-center justify-center font-bold border-primary-200 py-2 text-primary-text px-6 rounded hover:w-fit min-w-[150px] transition hover:bg-primary-200 hover:text-primary-100">
+              <button
+                type="submit"
+                className="group flex border items-center justify-center font-bold border-primary-200 py-2 text-primary-text px-6 rounded hover:w-fit min-w-[150px] transition hover:bg-primary-200 hover:text-primary-100"
+              >
                 Sended{" "}
                 <IoIosArrowDropright className="hidden group-hover:block ml-3" />
               </button>
