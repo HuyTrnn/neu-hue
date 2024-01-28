@@ -30,7 +30,8 @@ export default function Footer() {
 
             <ul className="mt-8 space-y-1 text-sm text-gray-200">
               <li>Kaiser-Wilhelm-Straße 51, 20355 Hamburg</li>
-              <li>10:00 – 20.00 Uhr</li>
+              <li >Mo. bis Fr.: 11 Uhr bis 21 Uhr</li>
+                <li >Sa. bis so. : 12h30. bis 21.00 Uhr</li>
             </ul>
 
             <ul className="mt-8 flex gap-6 justify-center">

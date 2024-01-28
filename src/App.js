@@ -13,6 +13,7 @@ import {
 
 import Contact from "./pages/Contact";
 import ScrollToTop from "./utils/ScrollToTop";
+import Order from "./pages/Order";
 
 function App() {
   const router = createBrowserRouter(
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="speisen" element={<Speisen />} />
         <Route path="kontakt" element={<Contact />} />
+        <Route path="Befehl" element={<Order />} />
       </Route>
     )
   );
@@ -34,6 +36,8 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="speisen" element={<Speisen />} />
         <Route path="kontakt" element={<Contact />} />
+        <Route path="Befehl" element={<Order />} />
+
       </Routes>
     
     </div>

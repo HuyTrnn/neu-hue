@@ -130,7 +130,7 @@ export default function ContactContent() {
               </p>
               <p className="text-gray-400 text-left">
                 Mo. bis Fr.: 11 Uhr bis 21 Uhr <br></br>
-                Sa. - So. : 13Uhr bis 21 Uhr
+                Sa. - So. : 12h30. bis 21.00 Uhr
               </p>
 
               <div className="flex justify-between items-center justify-center">

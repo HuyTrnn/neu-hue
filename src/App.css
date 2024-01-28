@@ -35,6 +35,7 @@
   background-repeat: repeat-y;
   background-size: 100% 92%;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .background-contact {
