@@ -37,7 +37,7 @@ export default function Introduce() {
             </h2>
           <div className="p-5 group relative rounded-lg bg-primary-100/30 lg:min-w-[300px] min-h-[120px]  cursor-pointertransform transition duration-500 hover:scale-125 flex justify-center items-center hover:bg-primary-100/50">
             <div className="">
-            <span className="text-primary-text text-[20px]  transition duration-150 ease-out hover:ease-in text-left leading-8">
+            <span className="text-primary-text text-[24px]  transition duration-150 ease-out hover:ease-in text-left leading-8">
               Geschäft: ! Lieferung Ab 20€! ! Schnelle und kostenlose Lieferung!
               <br></br> Rabatt -10,00% Ab den Bestellwert von 20,00 € (Nur Abholung)
               <br></br>Rabatt -10,00% Ab den Bestellwert von 30,00 € (Nur Lieferung).
