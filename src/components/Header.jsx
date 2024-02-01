@@ -87,6 +87,18 @@ export default function Header() {
               Kontakt
             </div>
           </NavLink>
+          <NavLink
+            to="/Befehl"
+            className="uppercase cursor-pointer hover:opacity-70 transition duration-150 ease-out font-bold text-lg "
+          >
+            <div
+            // style={{
+            //   color: colorText,
+            // }}
+            >
+              Befehl
+            </div>
+          </NavLink>
         </ul>
       </animated.header>
       

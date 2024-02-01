@@ -43,6 +43,22 @@ code {
     monospace;
 }
 
+.ant-tabs .ant-tabs-tab-btn {
+  color: #FF8D00;
+}
+
+.ant-tabs-nav::before {
+  border-bottom: 1px solid #FF8D00;
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+  background-color: #ce2329;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #ce2329;
+}
+
 .content {
   opacity: 0;
 }

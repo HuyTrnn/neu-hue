@@ -53,7 +53,7 @@ function getFood(a, b, c, d, e, f, more) {
   ];
 }
 
-const VORSPEISEN = {
+export const VORSPEISEN = {
   category: "VORSPEISEN",
   items: [
     {
@@ -275,7 +275,7 @@ const VORSPEISEN = {
   ],
 };
 
-const HAUPTSPEISEN = {
+export const HAUPTSPEISEN = {
   category: "HAUPTSPEISEN",
   items: [
     {
@@ -386,7 +386,7 @@ const HAUPTSPEISEN = {
   ],
 };
 
-const BOWLS = {
+export const BOWLS = {
   category: "BOWLS",
   items: [
     {
@@ -416,7 +416,7 @@ const BOWLS = {
   ],
 };
 
-const DACBIET = {
+export const DACBIET = {
   category: "DAC BIET",
   items: [
     {
@@ -599,7 +599,7 @@ const DACBIET = {
   ],
 };
 
-const GERICHTE = {
+export const GERICHTE = {
   category: "GERICHTE",
   items: [
     {
@@ -730,7 +730,7 @@ const GERICHTE = {
   ],
 };
 
-const DESSERTS = {
+export const DESSERTS = {
   category: "DESSERTS",
   items: [
     {
