@@ -44,7 +44,9 @@ export default function ContactContent() {
         name: data.firstname + data.lastname,
         recipient: data.email,
         message: data.content,
+        reply_to: data.email,
       });
+
       await sendFeedback(data).then(() => {
         toast.success("Erfolg !");
         setTimeout(() => {
