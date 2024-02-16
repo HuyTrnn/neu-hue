@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "../assets/images/logo.png";
+import React, { useEffect, useState } from "react";
+import { FaCartShopping } from "react-icons/fa6";
 import neu from "../assets/images/neu.png";
 import pho from "../assets/images/pho.png";
 import { Link, NavLink } from "react-router-dom";
@@ -10,16 +10,22 @@ import { useToggle } from "../context/ToggleContext";
 import { useSpring, animated } from "@react-spring/web";
 import useDetectScroll from "@smakss/react-scroll-direction";
 import ScrollToTopButton from "./ScrollToTop";
-export default function Header() {
+import ModalOrder from "./ModalOrder";
+export default function Header({total}) {
   const { state, dispatch } = useToggle();
+  const [toggle, setToggle] = useState(false);
   const scrollDir = useDetectScroll();
   const slideDown = useSpring({
     transform: scrollDir == "down" ? "translateY(-100%)" : "translateY(0%)",
   });
-  
+
 
   const handleToggle = () => {
     dispatch({ type: "TOGGLE" });
+  };
+
+  const openModal = (status) => {
+    setToggle(status);
   };
 
   return (
@@ -35,7 +41,7 @@ export default function Header() {
           state.isToggled ? "hidden " : ""
         } top-0 left-0 right-0  bg-black/30 flex items-center justify-between lg:px-[100px] md:px-[60px] px-6 z-[100] max-w-screen py-3 md:py-0`}
       >
-        <Link to='/' className=" w-fit  h-10 flex">
+        <Link to="/" className=" w-fit  h-10 flex">
           <img src={pho} alt="logo" className="text-base " />
           <img src={neu} alt="logo" className="text-base " />
         </Link>
@@ -99,10 +105,19 @@ export default function Header() {
               Befehl
             </div>
           </NavLink>
+          <li className="relative" onClick={() => openModal(!toggle)}>
+            <FaCartShopping />
+            {
+              <span className="bg-red-500 text-white-200 text-xs rounded-full w-5 h-5 flex items-center justify-center ml-1 absolute bg-hoverColor top-[-12px] right-[-14px]">
+                {total}
+              </span>
+            }
+          </li>
+          {toggle && <ModalOrder onToggle={openModal} />}
         </ul>
       </animated.header>
-      
-          <ResponsiveNav />
+
+      <ResponsiveNav />
     </>
   );
 }
