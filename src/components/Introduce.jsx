@@ -28,7 +28,7 @@ export default function Introduce() {
       className="w-full flex justify-center items-center py-10 px-[40px] md:px-[80px] lg:px-[120px] min-h-[700px]"
     >
       <div className="w-full flex flex-col gap-20">
-        <CSSTransition>
+        {/* <CSSTransition>
           <div className="flex flex-col gap-4 justify-center items-center">
             <h2 className="text-4xl text-primary-100 font-semibold">
               WOCHENKARTE 3 <br></br> 11 Uhr bis 15 Uhr
@@ -67,7 +67,7 @@ export default function Introduce() {
               <div className="absolute hidden left-0 top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-shine group-hover:block" />
             </div>
           </div>
-        </CSSTransition>
+        </CSSTransition> */}
         <CSSTransition
           in={sectionVisible}
           timeout={3000}

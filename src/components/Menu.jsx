@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import menu from "../assets/images/menu_page.jpg";
-export default function Menu() {
+export default function Menu({images}) {
   const [fullScreenImage, setFullScreenImage] = useState(false);
   const onClose = () => {
     setFullScreenImage(!fullScreenImage);
@@ -10,7 +10,7 @@ export default function Menu() {
       {!fullScreenImage ? (
         <img
           onClick={() => setFullScreenImage(!fullScreenImage)}
-          src={menu}
+          src={images ? images : menu}
           alt="Full Screen"
           className="max-w-full max-h-full z-50"
         />
@@ -21,7 +21,7 @@ export default function Menu() {
         >
           <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40"></div>
           <img
-            src={menu}
+             src={images ? images : menu}
             alt="Full Screen"
             className="max-w-full max-h-full z-50"
           />
