@@ -32,7 +32,7 @@ function getFood(a, b, c, d, e, f, more) {
       price: a || 10.9,
     },
     {
-      name: "Krosses Höhnchen",
+      name: "Krosses Hähnchen",
       price: b || 13.5,
     },
     {

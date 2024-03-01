@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/images/slider3.jpg";
+import img from "../assets/images/slider6.jpg";
 import { FaLocationDot } from "react-icons/fa6";
 export default function Footer() {
   return (

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import neon from "../assets/images/slider2.jpg";
+import neon from "../assets/images/slider6.jpg";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
