@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 import BookingTable from "./BookingTable";
 import { useToggle } from "../context/ToggleContext";
 import CarouselMobile from "./CarouselMobile";
-import discount from "../assets/images/WOCHENKARTE.jpg";
+import discount from "../assets/images/menuBuoiTrua.jpg"
 import Menu from "./Menu";
 
 export default function Content() {

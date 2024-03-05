@@ -16,7 +16,7 @@ import {
   Udonxaokrossesente,
   Comrang,
 } from "../assets/imagesHau";
-import { Tofubowl } from "../assets/imagesBowl";
+import { Tofubowl, pekingSuppe } from "../assets/imagesBowl";
 import { Dacbiet, Udonxao, Reisgerichtecury } from "../assets/imagesDacbiet";
 import {
   Entenbrustfilet,
@@ -69,7 +69,7 @@ export const VORSPEISEN = {
     },
     {
       name: "Peking Suppe",
-      img: commingSoon,
+      img: pekingSuppe,
       description: "",
       foods: [
         {
