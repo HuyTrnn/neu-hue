@@ -4,15 +4,15 @@ import FoodCard from "./FoodCard";
 
 export default function SpeisenMenu({ title, data }) {
   const [sectionVisible, setSectionVisible] = useState(false);
-  const [itemsToShow, setItemsToShow] = useState(6);
+  const [itemsToShow, setItemsToShow] = useState(8);
 
   const handleShowMore = () => {
-    const newItemsToShow = itemsToShow + 3;
+    const newItemsToShow = itemsToShow + 4;
     setItemsToShow(Math.min(newItemsToShow, data.length));
   };
 
   const handleHiden = () => {
-    setItemsToShow(6)
+    setItemsToShow(8)
   }
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function SpeisenMenu({ title, data }) {
       >
         <div
           id="list-food"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-6 gap-x-[5rem]"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center gap-y-6 gap-x-[5rem]"
         >
           {data.slice(0, itemsToShow).map((food, index) => (
             <FoodCard food={food} key={index} index={index + 1} />

@@ -93,27 +93,6 @@ export default function Header({total}) {
               Kontakt
             </div>
           </NavLink>
-          <NavLink
-            to="/Befehl"
-            className="uppercase cursor-pointer hover:opacity-70 transition duration-150 ease-out font-bold text-lg "
-          >
-            <div
-            // style={{
-            //   color: colorText,
-            // }}
-            >
-              Befehl
-            </div>
-          </NavLink>
-          <li className="relative" onClick={() => openModal(!toggle)}>
-            <FaCartShopping />
-            {
-              <span className="bg-red-500 text-white-200 text-xs rounded-full w-5 h-5 flex items-center justify-center ml-1 absolute bg-hoverColor top-[-12px] right-[-14px]">
-                {total}
-              </span>
-            }
-          </li>
-          {toggle && <ModalOrder onToggle={openModal} />}
         </ul>
       </animated.header>
 

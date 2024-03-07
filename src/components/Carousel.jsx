@@ -7,6 +7,7 @@ import img3 from "../assets/images/slide3.jpg";
 import img4 from "../assets/images/slide4.jpg";
 import img5 from "../assets/images/slide5.jpg";
 import img6 from "../assets/images/slider6.jpg";
+import img8 from "../assets/images/slide8.jpg";
 import bg from "../assets/images/pho-dark.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -24,7 +25,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 export default function Carousel() {
-  const slider = [img1, img2, img3, img4, img5, img6];
+  const slider = [img1, img2, img3, img4, img5, img6, img8];
 
   return (
     <Swiper
