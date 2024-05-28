@@ -8,6 +8,9 @@ import {
   Tofu,
   Friesavocado,
   Xoixoai,
+  wantai,
+  mongosalab,
+  gyoza,
 } from "../assets/imagesVor";
 import {
   Bunreisnudelnfruhlingsrollen,
@@ -145,7 +148,7 @@ export const VORSPEISEN = {
     },
     {
       name: "Gyoza 6 gebackene Gyoza-Teigtaschen",
-      img: commingSoon,
+      img: gyoza,
       description: "",
       foods: [
         {
@@ -185,7 +188,7 @@ export const VORSPEISEN = {
     },
     {
       name: "Wan Tan Chien",
-      img: commingSoon,
+      img: wantai,
       description:
         "6 teigtaschen gebacken, gefüllt mit Garnelen, Hähnchen und Gemüse",
       price: 6.0,
@@ -193,7 +196,7 @@ export const VORSPEISEN = {
     },
     {
       name: "Nom Xoai/ Mangosalat",
-      img: commingSoon,
+      img: mongosalab,
       description:
         "Frischer Mangosalat, dazu Kräuter und Erdnüsse. serviert mit Limetten-Dressing",
       foods: [

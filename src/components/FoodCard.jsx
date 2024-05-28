@@ -14,7 +14,7 @@ export default function FoodCard({ food, index }) {
         <img
           src={food.img || ""}
           alt="product-img"
-          className="w-full h-full rounded-lg object-fill"
+          className="w-full h-full rounded-lg object-cover"
         />
         {/* <div className="absolute top-0 flex  h-full w-full items-center justify-center p-10 sm:p-0 w-full ">
           <span className="font-bold text-lg text-primary-100 bg-black/50 line-clamp-2 w-full">
