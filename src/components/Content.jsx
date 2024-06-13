@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 import BookingTable from "./BookingTable";
 import { useToggle } from "../context/ToggleContext";
 import CarouselMobile from "./CarouselMobile";
-import discount from "../assets/images/menuBuoiTrua.jpg"
+import discount from "../assets/images/menuBuoiTrua.jpg";
 import Menu from "./Menu";
 
 export default function Content() {
@@ -15,9 +15,9 @@ export default function Content() {
       <div className="max-h-[750px] h-full md:block hidden">
         <Carousel />
       </div>
-      <div className="w-full flex justify-center items-center py-10 px-[40px] md:px-[80px] lg:px-[120px] min-h-[700px]">
+      {/* <div className="w-full flex justify-center items-center py-10 px-[40px] md:px-[80px] lg:px-[120px] min-h-[700px]">
         <div className="max-w-[500px]"><Menu images={discount} /></div>
-      </div>
+      </div> */}
       <div className="max-h-[750px] h-[700px] md:hidden block">
         <CarouselMobile />
       </div>
